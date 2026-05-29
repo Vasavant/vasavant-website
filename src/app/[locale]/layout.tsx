@@ -78,9 +78,11 @@ export default async function LocaleLayout({ children, params }: Props) {
   return (
     <html
       lang={locale}
-      className={`${plusJakartaSans.variable} ${inter.variable} ${jetbrainsMono.variable} h-full antialiased`}
+      className={`${plusJakartaSans.variable} ${inter.variable} ${jetbrainsMono.variable} h-full bg-paper text-ink antialiased`}
     >
-      <body className="min-h-full flex flex-col">
+      <body
+        className={`${inter.className} min-h-full flex flex-col bg-paper text-ink font-sans`}
+      >
         <GlobalJsonLd />
         <NextIntlClientProvider messages={messages}>
           {children}

@@ -17,6 +17,11 @@
 
   --spacing-section: 6rem;
   --spacing-section-lg: 8rem;
+
+  /* Fallback stacks until next/font variables hydrate on <html> */
+  --font-plus-jakarta: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-inter: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-jetbrains-mono: "JetBrains Mono", ui-monospace, monospace;
 }
 
 @theme inline {
@@ -26,15 +31,17 @@
   --color-ink-muted: var(--ink-muted);
   --color-navy: var(--navy);
   --color-cta: var(--cta);
-  --font-display: var(--font-plus-jakarta);
-  --font-sans: var(--font-inter);
-  --font-mono: var(--font-jetbrains-mono);
+  --font-family-display: var(--font-plus-jakarta);
+  --font-family-sans: var(--font-inter);
+  --font-family-mono: var(--font-jetbrains-mono);
+  --default-font-family: var(--font-family-sans);
+  --default-mono-font-family: var(--font-family-mono);
 }
 
 body {
-  background: var(--paper);
+  background-color: var(--paper);
   color: var(--ink);
-  font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+  font-family: var(--font-family-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
