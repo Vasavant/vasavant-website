@@ -203,6 +203,102 @@
       "Tableros y reportes de negocio",
       "Herramientas internas y apps ligeras"
     ],
+    "coreCapabilitiesDetailed": [
+      {
+        "title": "Sistemas de inteligencia operacional",
+        "description": "Modelos de datos unificados, reglas de proceso y capas consultables que convierten entradas dispersas en una fuente de verdad operativa.",
+        "icon": "brain"
+      },
+      {
+        "title": "Automatización de datos y diseño de flujos",
+        "description": "Disparadores, enrutamiento e integraciones que eliminan traspasos manuales entre WhatsApp, ERP, CRM y hojas de cálculo.",
+        "icon": "workflow"
+      },
+      {
+        "title": "Tableros y reportes de negocio",
+        "description": "Visibilidad por rol con métricas en tiempo real, alertas y reportes que tu equipo realmente abre.",
+        "icon": "chart"
+      },
+      {
+        "title": "Herramientas internas y apps ligeras",
+        "description": "Interfaces enfocadas para captura, aprobación y registro en campo, sin reemplazar las herramientas que ya usas.",
+        "icon": "app"
+      }
+    ],
+    "servicesDetailed": [
+      {
+        "title": "Inteligencia de Negocio Conversacional",
+        "subtitle": "Consulta tu operación desde WhatsApp",
+        "description": "Pregúntale a tu negocio qué está pasando y obtén una respuesta. Acceso en lenguaje natural a datos operativos sin abrir otro tablero.",
+        "bullets": [
+          "Respuestas instantáneas desde datos operativos en vivo",
+          "Sin una app nueva que tu equipo deba aprender",
+          "Construido sobre fuentes estructuradas y auditables"
+        ],
+        "outcome": "Respuestas en segundos, no otro login a un tablero",
+        "idealFor": "Líderes de operaciones, gerentes de planta y supervisores de campo que viven en WhatsApp",
+        "howItWorks": [
+          {
+            "title": "Estructura tus fuentes",
+            "description": "Unificamos registros de WhatsApp, exportaciones de ERP, hojas e inputs de campo en un modelo consultable."
+          },
+          {
+            "title": "Define la lógica de negocio",
+            "description": "Métricas, filtros y permisos para que cada respuesta refleje cómo opera realmente tu negocio."
+          },
+          {
+            "title": "Despliega acceso conversacional",
+            "description": "Tu equipo pregunta en lenguaje natural y obtiene respuestas auditables desde datos en vivo."
+          },
+          {
+            "title": "Itera sobre preguntas",
+            "description": "Refinamos consultas y agregamos nuevas fuentes a medida que evoluciona tu operación."
+          }
+        ],
+        "deliverables": [
+          "Capa de datos operativos estructurada",
+          "Interfaz de consulta por WhatsApp",
+          "Reglas de acceso por rol",
+          "Log de auditoría de consultas"
+        ]
+      },
+      {
+        "title": "Operaciones Agénticas",
+        "subtitle": "Ejecución autónoma sobre arquitectura sólida",
+        "description": "Agentes digitales que navegan sistemas internos, interpretan documentos, actualizan registros y ejecutan administración repetitiva.",
+        "bullets": [
+          "Interpretación de documentos y actualización de registros",
+          "Disparadores de flujo y enrutamiento de tareas",
+          "Capa de datos sólida como base"
+        ],
+        "outcome": "Horas de trabajo administrativo automatizadas, con reglas que tú controlas",
+        "idealFor": "Equipos ahogados en recepción de documentos, actualización de registros y traspasos entre sistemas",
+        "howItWorks": [
+          {
+            "title": "Mapea rutas de ejecución",
+            "description": "Identificamos tareas repetitivas: recepción de documentos, actualización de registros, aprobaciones y enrutamiento."
+          },
+          {
+            "title": "Construye la capa de agentes",
+            "description": "Agentes con guardrails: humano en el loop donde hace falta, autónomos donde es seguro."
+          },
+          {
+            "title": "Conecta a tu stack",
+            "description": "ERP, CRM, correo, WhatsApp y herramientas internas integradas en una capa de ejecución."
+          },
+          {
+            "title": "Monitorea y escala",
+            "description": "Logs de ejecución, manejo de errores y expansión a nuevos flujos con el tiempo."
+          }
+        ],
+        "deliverables": [
+          "Capa de orquestación de agentes",
+          "Pipelines de interpretación de documentos",
+          "Reglas de automatización de flujos",
+          "Tablero de monitoreo de ejecución"
+        ]
+      }
+    ],
     "processSteps": [
       {
         "title": "Diagnóstico operativo",
@@ -297,7 +393,13 @@
         "title": "Hecho para operaciones reales",
         "subtitle": "Mismo método, distinta forma operativa. Explora cómo estructuramos datos, flujos y agentes en cada industria.",
         "imageAlt": "Collage editorial de cinco industrias operativas conectadas por un sistema unificado"
-      }
+      },
+      "intro": "Toda industria comparte el mismo problema: datos dispersos, traspasos manuales y decisiones sin visibilidad. Aplicamos un método en cinco formas operativas, adaptando la capa de datos, automatizaciones y agentes a cómo funciona realmente tu negocio.",
+      "stats": [
+        { "value": "5", "label": "industrias donde más desplegamos" },
+        { "value": "4–12", "label": "semanas de despliegue típico" },
+        { "value": "1", "label": "capa operacional unificada" }
+      ]
     },
     "useCaseDetail": {
       "logistics": {
@@ -472,7 +574,37 @@
         "subtitle": "Estructuramos tu operación y desplegamos inteligencia sobre una base sólida, sin apps dispersas ni datos huérfanos.",
         "imageAlt": "Servicios de inteligencia operacional: conversacional y agéntico"
       },
-      "splitTitle": "Cómo se ve en la práctica"
+      "intro": "La mayoría de equipos mid-market no necesita otra suscripción SaaS. Necesita que sus herramientas actuales se hablen entre sí. Construimos la capa operacional debajo: datos estructurados, automatizaciones, tableros e inteligencia que puedes consultar o delegar a agentes.",
+      "comparison": {
+        "conversational": "Pregunta y entiende",
+        "agentic": "Ejecuta y automatiza"
+      },
+      "idealForLabel": "Ideal para",
+      "howItWorksLabel": "Cómo funciona",
+      "deliverablesLabel": "Qué recibes",
+      "splitTitle": "Cómo se ve en la práctica",
+      "splitSubtitle": "Cada modelo sigue la misma base: datos estructurados primero, y luego despliega inteligencia encima.",
+      "capabilitiesTitle": "Todo en el stack",
+      "capabilitiesSubtitle": "Más allá de los dos modelos centrales, cada engagement incluye los bloques que tu operación necesita para escalar.",
+      "faqTitle": "Preguntas frecuentes",
+      "faq": [
+        {
+          "question": "¿Necesitamos reemplazar nuestro ERP o CRM?",
+          "answer": "No. Integramos con lo que ya usas (WhatsApp, ERP, CRM, hojas de cálculo y herramientas de campo) y construimos una capa estructurada encima. Tu equipo sigue trabajando en interfaces familiares."
+        },
+        {
+          "question": "¿Cuánto tardamos en ver resultados?",
+          "answer": "La mayoría de engagements entrega una capa operacional funcional en 4–12 semanas. El acceso conversacional y las primeras automatizaciones suelen estar en vivo en la primera mitad del proyecto."
+        },
+        {
+          "question": "¿Cuál es la diferencia entre BI conversacional y operaciones agénticas?",
+          "answer": "BI conversacional permite a tu equipo hacer preguntas y obtener respuestas desde datos en vivo. Operaciones agénticas va más allá: los agentes ejecutan tareas, actualizan registros y enrutan trabajo de forma autónoma según reglas que tú defines."
+        },
+        {
+          "question": "¿Podemos empezar con un caso de uso y expandir?",
+          "answer": "Sí. Típicamente empezamos con tu flujo de mayor dolor (seguimiento de flota, visibilidad de pipeline, métricas de producción) y expandimos la capa de datos y agentes a medida que la operación madura."
+        }
+      ]
     },
     "process": {
       "meta": {
@@ -485,8 +617,12 @@
         "subtitle": "Cuatro pilares de madurez y ocho pasos de ejecución para desplegar inteligencia operacional de forma sistemática.",
         "imageAlt": "Timeline de ocho pasos hacia inteligencia operacional"
       },
+      "intro": "No dejamos software y nos vamos. Cada engagement sigue una progresión de madurez: desde mapear cómo opera realmente tu negocio, hasta estructurar los datos, desplegar automatizaciones, tableros y agentes sobre una base que escala.",
+      "pillarsTitle": "Cuatro pilares de madurez",
+      "pillarsSubtitle": "Cada pilar se apoya en el anterior. Saltarte uno y la capa de inteligencia encima no se sostiene.",
       "stepsTitle": "Los 8 pasos de ejecución",
-      "stepsSubtitle": "Disponibles en engagements completos, típicamente en 4–12 semanas según alcance."
+      "stepsSubtitle": "Disponibles en engagements completos, típicamente en 4–12 semanas según alcance.",
+      "outcome": "Al final, tu equipo consulta datos en vivo, recibe alertas automatizadas y delega trabajo repetitivo a agentes, todo sobre una capa operacional estructurada."
     },
     "contact": {
       "meta": {
@@ -510,10 +646,13 @@
       "hero": {
         "eyebrow": "Recursos",
         "title": "Inteligencia operacional en la práctica",
-        "subtitle": "Ideas y marcos para estructurar operaciones reales—sin reemplazar las herramientas que ya usas.",
+        "subtitle": "Ideas y marcos para estructurar operaciones reales, sin reemplazar las herramientas que ya usas.",
         "imageAlt": "Artículos sobre operaciones, datos y automatización"
       },
       "empty": "Próximamente publicaremos más recursos.",
+      "featuredLabel": "Destacado",
+      "allArticlesLabel": "Todos los artículos",
+      "readTimeSuffix": "min de lectura",
       "readMore": "Leer artículo",
       "backToIndex": "Volver a recursos",
       "faqTitle": "Preguntas frecuentes",

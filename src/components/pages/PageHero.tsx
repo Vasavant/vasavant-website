@@ -28,7 +28,7 @@ export function PageHero({
           variant="dots"
           className="absolute top-20 right-[8%] w-10 h-10 text-[var(--cta)] opacity-25 hidden lg:block"
         />
-        <div className="section-inner section-pad pb-8 lg:pb-12">
+        <div className="section-inner pt-12 pb-8 lg:pt-14 lg:pb-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center">
             <div>
               <p className="hand-label mb-4">{eyebrow}</p>

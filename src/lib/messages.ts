@@ -1,9 +1,12 @@
 import type {
+  CoreCapability,
+  FaqItem,
   NavItem,
   NavLink,
   ProcessPillar,
   ProcessStep,
   ServiceCard,
+  ServiceDetailed,
   StatItem,
   UseCaseCard,
 } from '@/lib/content-types';
@@ -32,6 +35,18 @@ export function getFeaturedServices(raw: unknown): ServiceCard[] {
 
 export function getCoreCapabilities(raw: unknown): string[] {
   return raw as string[];
+}
+
+export function getCoreCapabilitiesDetailed(raw: unknown): CoreCapability[] {
+  return raw as CoreCapability[];
+}
+
+export function getServicesDetailed(raw: unknown): ServiceDetailed[] {
+  return raw as ServiceDetailed[];
+}
+
+export function getFaqItems(raw: unknown): FaqItem[] {
+  return raw as FaqItem[];
 }
 
 export function getUseCaseCards(raw: unknown): UseCaseCard[] {

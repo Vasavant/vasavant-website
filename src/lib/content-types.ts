@@ -39,6 +39,29 @@ export interface ServiceCard {
   bullets: string[];
 }
 
+export interface ServiceHowItWorksStep {
+  title: string;
+  description: string;
+}
+
+export interface ServiceDetailed extends ServiceCard {
+  outcome: string;
+  idealFor: string;
+  howItWorks: ServiceHowItWorksStep[];
+  deliverables: string[];
+}
+
+export interface CoreCapability {
+  title: string;
+  description: string;
+  icon: 'brain' | 'workflow' | 'chart' | 'app';
+}
+
+export interface FaqItem {
+  question: string;
+  answer: string;
+}
+
 export type UseCaseAccent = 'blue' | 'green' | 'amber' | 'coral' | 'navy';
 
 export interface UseCaseCard {

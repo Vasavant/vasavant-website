@@ -33,6 +33,7 @@ export default async function ContactPage({ params }: Props) {
   return (
     <SiteShell>
       <PageHero
+        layout="split"
         eyebrow={t('hero.eyebrow')}
         title={t('hero.title')}
         subtitle={t('hero.subtitle')}

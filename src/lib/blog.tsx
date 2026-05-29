@@ -8,6 +8,7 @@ import { mdxComponents } from '@/components/mdx/MDXComponents';
 import { BLOG_TRANSLATION_SLUGS } from '@/lib/blog-locale-map';
 import type { ReactElement } from 'react';
 import type { UseCaseSlug } from '@/lib/routes';
+import { useCaseImagePaths } from '@/lib/routes';
 import { useCaseHref } from '@/lib/use-case-link';
 import { Link } from '@/i18n/navigation';
 
@@ -24,6 +25,7 @@ export interface BlogPostFrontmatter {
   description: string;
   publishedAt: string;
   tags: string[];
+  coverImage?: string;
   relatedUseCase?: UseCaseSlug;
   draft?: boolean;
   faq?: BlogFaqItem[];
@@ -70,6 +72,23 @@ function readRawPost(locale: Locale, slug: string): { content: string; data: Blo
     content,
     data: data as BlogPostFrontmatter,
   };
+}
+
+const DEFAULT_BLOG_COVER = '/images/operations-map.png';
+
+export function getPostCoverImage(frontmatter: BlogPostFrontmatter): string {
+  if (frontmatter.coverImage) return frontmatter.coverImage;
+  if (frontmatter.relatedUseCase) {
+    return useCaseImagePaths[frontmatter.relatedUseCase];
+  }
+  return DEFAULT_BLOG_COVER;
+}
+
+export function getPostReadTimeMinutes(locale: Locale, slug: string): number {
+  const raw = readRawPost(locale, slug);
+  if (!raw) return 0;
+  const words = raw.content.trim().split(/\s+/).length;
+  return Math.max(1, Math.ceil(words / 200));
 }
 
 export function getAllPostSummaries(locale: Locale): BlogPostSummary[] {

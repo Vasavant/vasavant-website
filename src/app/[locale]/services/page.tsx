@@ -4,8 +4,10 @@ import { notFound } from 'next/navigation';
 import { SiteShell } from '@/components/layout/SiteShell';
 import { PageHero } from '@/components/pages/PageHero';
 import { PageCta } from '@/components/pages/PageCta';
+import { ServicesOverview } from '@/components/pages/ServicesOverview';
 import { ServicesSplitSection } from '@/components/pages/ServicesSplitSection';
-import { Services } from '@/components/sections/Services';
+import { ServicesCapabilities } from '@/components/pages/ServicesCapabilities';
+import { ServicesFaq } from '@/components/pages/ServicesFaq';
 import { routing, type Locale } from '@/i18n/routing';
 import { buildPageMetadata, staticLocalizedPath } from '@/lib/seo';
 
@@ -35,6 +37,7 @@ export default async function ServicesPage({ params }: Props) {
   return (
     <SiteShell>
       <PageHero
+        layout="split"
         eyebrow={t('hero.eyebrow')}
         title={t('hero.title')}
         subtitle={t('hero.subtitle')}
@@ -42,8 +45,10 @@ export default async function ServicesPage({ params }: Props) {
         imageAlt={t('hero.imageAlt')}
         priority
       />
-      <Services />
+      <ServicesOverview />
       <ServicesSplitSection />
+      <ServicesCapabilities />
+      <ServicesFaq />
       <PageCta />
     </SiteShell>
   );

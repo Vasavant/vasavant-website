@@ -203,6 +203,102 @@
       "Business dashboards & reporting",
       "Internal tools & lightweight apps"
     ],
+    "coreCapabilitiesDetailed": [
+      {
+        "title": "Operational intelligence systems",
+        "description": "Unified data models, process rules, and queryable layers that turn scattered inputs into one operational source of truth.",
+        "icon": "brain"
+      },
+      {
+        "title": "Data automation & workflow design",
+        "description": "Triggers, routing, and integrations that remove manual handoffs between WhatsApp, ERP, CRM, and spreadsheets.",
+        "icon": "workflow"
+      },
+      {
+        "title": "Business dashboards & reporting",
+        "description": "Role-specific visibility with real-time metrics, alerts, and reports your team actually opens.",
+        "icon": "chart"
+      },
+      {
+        "title": "Internal tools & lightweight apps",
+        "description": "Focused interfaces for capture, approval, and field logging, without replacing the tools you already run on.",
+        "icon": "app"
+      }
+    ],
+    "servicesDetailed": [
+      {
+        "title": "Conversational Business Intelligence",
+        "subtitle": "Query your operation from WhatsApp",
+        "description": "Ask your business what is happening and get an answer. Natural-language access to operational data without opening another dashboard.",
+        "bullets": [
+          "Instant answers from live operational data",
+          "No new app for your team to learn",
+          "Built on structured, auditable sources"
+        ],
+        "outcome": "Answers in seconds, not another dashboard login",
+        "idealFor": "Ops leaders, plant managers, and field supervisors who live in WhatsApp",
+        "howItWorks": [
+          {
+            "title": "Structure your sources",
+            "description": "We unify WhatsApp logs, ERP exports, sheets, and field inputs into one queryable model."
+          },
+          {
+            "title": "Define business logic",
+            "description": "Metrics, filters, and permissions so every answer reflects how your operation actually runs."
+          },
+          {
+            "title": "Deploy conversational access",
+            "description": "Your team asks in natural language and gets auditable answers from live data."
+          },
+          {
+            "title": "Iterate on questions",
+            "description": "We refine queries and add new data sources as your operation evolves."
+          }
+        ],
+        "deliverables": [
+          "Structured operational data layer",
+          "WhatsApp query interface",
+          "Role-based access rules",
+          "Query audit log"
+        ]
+      },
+      {
+        "title": "Agentic Operations",
+        "subtitle": "Autonomous execution on solid architecture",
+        "description": "Digital agents that navigate internal systems, parse documents, update records, and run repetitive administration.",
+        "bullets": [
+          "Document parsing and record updates",
+          "Workflow triggers and task routing",
+          "Rock-solid data layer underneath"
+        ],
+        "outcome": "Hours of admin work handled automatically, on rules you control",
+        "idealFor": "Teams drowning in document intake, record updates, and cross-system handoffs",
+        "howItWorks": [
+          {
+            "title": "Map execution paths",
+            "description": "We identify repetitive tasks: document intake, record updates, approvals, and routing."
+          },
+          {
+            "title": "Build the agent layer",
+            "description": "Agents with guardrails: human-in-the-loop where needed, autonomous where safe."
+          },
+          {
+            "title": "Connect to your stack",
+            "description": "ERP, CRM, email, WhatsApp, and internal tools wired into one execution layer."
+          },
+          {
+            "title": "Monitor and scale",
+            "description": "Execution logs, error handling, and expansion to new workflows over time."
+          }
+        ],
+        "deliverables": [
+          "Agent orchestration layer",
+          "Document parsing pipelines",
+          "Workflow automation rules",
+          "Execution monitoring dashboard"
+        ]
+      }
+    ],
     "processSteps": [
       {
         "title": "Operational diagnosis",
@@ -290,14 +386,20 @@
     "useCases": {
       "meta": {
         "title": "Use Cases | VasaVant",
-        "description": "Logistics, field ops, and commercial operations—operational intelligence across WhatsApp, ERP, and structured data."
+        "description": "Logistics, field ops, and commercial operations: operational intelligence across WhatsApp, ERP, and structured data."
       },
       "hero": {
         "eyebrow": "Use cases",
         "title": "Built for real operations",
         "subtitle": "Same method, different operational shape. Explore how we structure data, workflows, and agents in each industry.",
         "imageAlt": "Editorial collage of five operational industries connected by one unified system"
-      }
+      },
+      "intro": "Every industry runs on the same problem: scattered data, manual handoffs, and decisions made without visibility. We apply one method across five operational shapes, tailoring the data layer, automations, and agents to how your business actually works.",
+      "stats": [
+        { "value": "5", "label": "industries we ship most" },
+        { "value": "4–12", "label": "weeks typical deployment" },
+        { "value": "1", "label": "unified operational layer" }
+      ]
     },
     "useCaseDetail": {
       "logistics": {
@@ -472,7 +574,37 @@
         "subtitle": "We structure your operation and deploy intelligence on a solid foundation, with no scattered apps or orphaned data.",
         "imageAlt": "Operational intelligence services: conversational and agentic"
       },
-      "splitTitle": "What it looks like in practice"
+      "intro": "Most mid-market teams don't need another SaaS subscription. They need their existing tools to talk to each other. We build the operational layer underneath: structured data, automations, dashboards, and intelligence you can query or delegate to agents.",
+      "comparison": {
+        "conversational": "Ask & understand",
+        "agentic": "Execute & automate"
+      },
+      "idealForLabel": "Ideal for",
+      "howItWorksLabel": "How it works",
+      "deliverablesLabel": "What you get",
+      "splitTitle": "What it looks like in practice",
+      "splitSubtitle": "Each model follows the same foundation: structured data first, then deploys intelligence on top.",
+      "capabilitiesTitle": "Everything in the stack",
+      "capabilitiesSubtitle": "Beyond the two core models, every engagement includes the building blocks your operation needs to scale.",
+      "faqTitle": "Common questions",
+      "faq": [
+        {
+          "question": "Do we need to replace our ERP or CRM?",
+          "answer": "No. We integrate with what you already use (WhatsApp, ERP, CRM, spreadsheets, and field tools) and build a structured layer on top. Your team keeps working in familiar interfaces."
+        },
+        {
+          "question": "How long until we see results?",
+          "answer": "Most engagements deliver a working operational layer in 4–12 weeks. Conversational access and first automations often go live in the first half of the project."
+        },
+        {
+          "question": "What's the difference between conversational BI and agentic operations?",
+          "answer": "Conversational BI lets your team ask questions and get answers from live data. Agentic operations goes further: agents execute tasks, update records, and route work autonomously on rules you define."
+        },
+        {
+          "question": "Can we start with one use case and expand?",
+          "answer": "Yes. We typically start with your highest-pain workflow (fleet tracking, pipeline visibility, production metrics) and expand the data layer and agents as the operation matures."
+        }
+      ]
     },
     "process": {
       "meta": {
@@ -485,8 +617,12 @@
         "subtitle": "Four maturity pillars and eight execution steps to deploy operational intelligence systematically.",
         "imageAlt": "Eight-step timeline toward operational intelligence"
       },
+      "intro": "We don't drop software and leave. Every engagement follows a maturity progression: from mapping how your operation actually runs, to structuring the data, to deploying automations, dashboards, and agents on a foundation that scales.",
+      "pillarsTitle": "Four pillars of maturity",
+      "pillarsSubtitle": "Each pillar builds on the last. Skip one and the intelligence layer above it won't hold.",
       "stepsTitle": "The 8 execution steps",
-      "stepsSubtitle": "Available on full engagements, typically within 4–12 weeks depending on scope."
+      "stepsSubtitle": "Available on full engagements, typically within 4–12 weeks depending on scope.",
+      "outcome": "By the end, your team queries live data, receives automated alerts, and delegates repetitive work to agents, all on one structured operational layer."
     },
     "contact": {
       "meta": {
@@ -514,6 +650,9 @@
         "imageAlt": "Articles on operations, data, and automation"
       },
       "empty": "More articles coming soon.",
+      "featuredLabel": "Featured",
+      "allArticlesLabel": "All articles",
+      "readTimeSuffix": "min read",
       "readMore": "Read article",
       "backToIndex": "Back to blog",
       "faqTitle": "Frequently asked questions",
