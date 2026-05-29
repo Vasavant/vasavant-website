@@ -1,0 +1,93 @@
+import type { Metadata } from "next";
+import { Plus_Jakarta_Sans, Inter, JetBrains_Mono } from "next/font/google";
+import { NextIntlClientProvider } from "next-intl";
+import {
+  getMessages,
+  getTranslations,
+  setRequestLocale,
+} from "next-intl/server";
+import { notFound } from "next/navigation";
+import { hasLocale } from "next-intl";
+import { routing, type Locale } from "@/i18n/routing";
+import "../globals.css";
+
+const plusJakartaSans = Plus_Jakarta_Sans({
+  variable: "--font-plus-jakarta",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+  display: "swap",
+});
+
+const inter = Inter({
+  variable: "--font-inter",
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600"],
+  display: "swap",
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  variable: "--font-jetbrains-mono",
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  display: "swap",
+});
+
+type Props = {
+  children: React.ReactNode;
+  params: Promise<{ locale: string }>;
+};
+
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+
+  if (!hasLocale(routing.locales, locale)) {
+    return {};
+  }
+
+  const t = await getTranslations({ locale, namespace: "metadata" });
+
+  return {
+    title: t("title"),
+    description: t("description"),
+    alternates: {
+      languages: {
+        es: "/",
+        en: "/en",
+      },
+    },
+  };
+}
+
+export default async function LocaleLayout({ children, params }: Props) {
+  const { locale } = await params;
+
+  if (!hasLocale(routing.locales, locale)) {
+    notFound();
+  }
+
+  setRequestLocale(locale);
+  const messages = await getMessages();
+
+  return (
+    <html
+      lang={locale}
+      className={`${plusJakartaSans.variable} ${inter.variable} ${jetbrainsMono.variable} h-full antialiased`}
+    >
+      <body className="min-h-full flex flex-col">
+        <NextIntlClientProvider messages={messages}>
+          {children}
+        </NextIntlClientProvider>
+      </body>
+    </html>
+  );
+}
+
+export type { Locale };

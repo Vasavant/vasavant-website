@@ -1,6 +1,7 @@
 import { Clock, Search, Layers, Bot } from 'lucide-react';
-import type { ProcessPillar } from '@/lib/content';
-import { processPillars } from '@/lib/content';
+import { getTranslations } from 'next-intl/server';
+import type { ProcessPillar } from '@/lib/content-types';
+import { getProcessPillars } from '@/lib/messages';
 
 const iconMap = {
   clock: Clock,
@@ -18,13 +19,17 @@ function ProcessIcon({ icon }: { icon: ProcessPillar['icon'] }) {
   );
 }
 
-export function HowWeWork() {
+export async function HowWeWork() {
+  const t = await getTranslations('howWeWork');
+  const tContent = await getTranslations('content');
+  const processPillars = getProcessPillars(tContent.raw('processPillars'));
+
   return (
     <section id="process" className="section-cream section-pad">
       <div className="section-inner">
-        <p className="hand-label mb-4">Our process</p>
+        <p className="hand-label mb-4">{t('label')}</p>
         <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-[2.75rem] tracking-tight text-[var(--ink)] mb-14 lg:mb-16">
-          How we work
+          {t('title')}
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
@@ -40,9 +45,9 @@ export function HowWeWork() {
         </div>
 
         <p className="mt-12 pt-8 border-t border-[var(--border-ink)] text-sm text-[var(--ink-muted)]">
-          Typical deployment:{' '}
-          <span className="font-semibold text-[var(--ink)]">4-12 weeks</span> depending on scope.
-          Full eight-step execution available on engagement.
+          {t('footerPrefix')}{' '}
+          <span className="font-semibold text-[var(--ink)]">{t('footerWeeks')}</span>{' '}
+          {t('footerSuffix')}
         </p>
       </div>
     </section>

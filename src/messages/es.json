@@ -1,0 +1,210 @@
+{
+  "metadata": {
+    "title": "VasaVant: Estudio de Inteligencia Operacional",
+    "description": "Convierte datos dispersos y flujos manuales en sistemas de inteligencia estructurados."
+  },
+  "nav": {
+    "getStarted": "Comenzar",
+    "seeHowItWorks": "Ver cómo funciona"
+  },
+  "languageSwitcher": {
+    "label": "Idioma",
+    "es": "ES",
+    "en": "EN"
+  },
+  "hero": {
+    "titleLine1": "¿Tu negocio",
+    "titleLine2": "realmente opera con inteligencia?",
+    "subtitle": "VasaVant convierte datos dispersos y flujos manuales en sistemas de inteligencia estructurados que puedes consultar, automatizar y operar con agentes asistidos por IA.",
+    "imageAlt": "Equipo colaborando en flujos operativos con tableros y herramientas conectadas"
+  },
+  "problem": {
+    "label": "El problema",
+    "titleLine1": "Obsesionados con resultados,",
+    "titleLine2": "no con apps dispersas",
+    "description": "La mayoría de las empresas operan en un caos controlado: información crítica en silos, flujos que dependen de intervención manual y visibilidad operativa como un lujo constante.",
+    "toolsLabel": "Construido con herramientas que ya usas",
+    "imageAlt": "Herramientas de negocio dispersas convergiendo en un sistema unificado de inteligencia operacional"
+  },
+  "testimonial": {
+    "quote": "El agente solo es tan útil como el sistema que lo sostiene. Primero estructuramos la operación, luego desplegamos inteligencia.",
+    "brandName": "VasaVant",
+    "brandTagline": "Estudio de Inteligencia Operacional",
+    "role": "Líder de operaciones",
+    "industry": "Logística mid-market",
+    "imageAlt": "Retrato editorial abstracto que representa la voz de un cliente VasaVant"
+  },
+  "solution": {
+    "bannerTitle": "Somos transparentes con el stack: primero estructura, después inteligencia.",
+    "maturityLabel": "La ruta de madurez",
+    "maturityTitle": "La Ruta de Madurez",
+    "maturitySteps": [
+      "Datos dispersos",
+      "Datos estructurados",
+      "Procesos definidos",
+      "Automatizaciones",
+      "Tableros",
+      "Acceso conversacional",
+      "Agentes digitales"
+    ],
+    "maturityFooter": "VasaVant guía a tu organización por esta progresión, construyendo cada capa de forma sistemática hasta lograr inteligencia operacional completa."
+  },
+  "howWeWork": {
+    "label": "Nuestro proceso",
+    "title": "Cómo trabajamos",
+    "footerPrefix": "Despliegue típico:",
+    "footerWeeks": "4-12 semanas",
+    "footerSuffix": "según el alcance. Ejecución completa en ocho pasos disponible en el engagement."
+  },
+  "services": {
+    "label": "Capacidades",
+    "title": "Dos modelos, una misión para ti",
+    "getStarted": "Comenzar",
+    "alsoIncluded": "También incluido"
+  },
+  "useCases": {
+    "label": "Casos de uso",
+    "title": "Hecho para operaciones reales",
+    "subtitle": "Cinco industrias donde más desplegamos. Mismo método, distinta forma operativa.",
+    "learnMore": "Saber más"
+  },
+  "finalCta": {
+    "title": "¿Listo para transformar tu día a día?",
+    "description": "Convierte operaciones dispersas en inteligencia estructurada. Te ayudamos a construir la capa operacional para ejecución asistida por IA.",
+    "getStarted": "Comenzar",
+    "imageAlt": "Persona en un escritorio con flujo de trabajo e íconos de aplicaciones conectadas"
+  },
+  "footer": {
+    "tagline": "Tu flujo de trabajo, pero más inteligente.",
+    "description": "Sistemas de inteligencia operacional para negocios del mundo real.",
+    "servicesTitle": "Servicios",
+    "companyTitle": "Empresa",
+    "contactTitle": "Contacto",
+    "serviceLinks": {
+      "intelligenceSystems": "Sistemas de inteligencia",
+      "dataAutomation": "Automatización de datos",
+      "conversationalBi": "BI conversacional",
+      "agenticOperations": "Operaciones agénticas"
+    },
+    "companyLinks": {
+      "theProblem": "El problema",
+      "theMethod": "El método",
+      "useCases": "Casos de uso",
+      "process": "Proceso"
+    },
+    "emailAria": "Correo",
+    "shareAria": "Compartir",
+    "copyright": "Todos los derechos reservados."
+  },
+  "content": {
+    "navLinks": [
+      { "name": "Problema", "href": "#problem" },
+      { "name": "Método", "href": "#method" },
+      { "name": "Servicios", "href": "#services" },
+      { "name": "Casos de uso", "href": "#use-cases" },
+      { "name": "Proceso", "href": "#process" }
+    ],
+    "heroStats": [
+      { "value": "4-12", "label": "semanas de despliegue" },
+      { "value": "6+", "label": "capacidades construidas" },
+      { "value": "100%", "label": "sistemas a medida" },
+      { "value": "∞", "label": "iteración continua" }
+    ],
+    "trustedTools": [
+      "WhatsApp",
+      "Airtable",
+      "n8n",
+      "Make",
+      "Zapier",
+      "PostgreSQL"
+    ],
+    "processPillars": [
+      {
+        "title": "Mapear la operación",
+        "description": "Entender flujos, fuentes de datos y dónde ocurren realmente las decisiones.",
+        "icon": "search"
+      },
+      {
+        "title": "Estructurar los datos",
+        "description": "Esquemas unificados y reglas de proceso para que la inteligencia tenga una base sólida.",
+        "icon": "layers"
+      },
+      {
+        "title": "Automatizar y reportar",
+        "description": "Tableros, disparadores y enrutamiento que eliminan la carga manual de reportes.",
+        "icon": "clock"
+      },
+      {
+        "title": "Desplegar agentes",
+        "description": "Acceso conversacional y ejecución autónoma sobre tu capa operacional.",
+        "icon": "bot"
+      }
+    ],
+    "featuredServices": [
+      {
+        "title": "Inteligencia de Negocio Conversacional",
+        "subtitle": "Consulta tu operación desde WhatsApp",
+        "description": "Pregúntale a tu negocio qué está pasando y obtén una respuesta. Acceso en lenguaje natural a datos operativos sin abrir otro tablero.",
+        "bullets": [
+          "Respuestas instantáneas desde datos operativos en vivo",
+          "Sin una app nueva que tu equipo deba aprender",
+          "Construido sobre fuentes estructuradas y auditables"
+        ]
+      },
+      {
+        "title": "Operaciones Agénticas",
+        "subtitle": "Ejecución autónoma sobre arquitectura sólida",
+        "description": "Agentes digitales que navegan sistemas internos, interpretan documentos, actualizan registros y ejecutan administración repetitiva.",
+        "bullets": [
+          "Interpretación de documentos y actualización de registros",
+          "Disparadores de flujo y enrutamiento de tareas",
+          "Capa de datos sólida como base"
+        ]
+      }
+    ],
+    "coreCapabilities": [
+      "Sistemas de inteligencia operacional",
+      "Automatización de datos y diseño de flujos",
+      "Tableros y reportes de negocio",
+      "Herramientas internas y apps ligeras"
+    ],
+    "useCaseCards": [
+      {
+        "number": "01",
+        "tag": "Logística",
+        "title": "Logística y Transporte",
+        "description": "Seguimiento de flota, registro de viajes, mantenimiento programado y optimización de entregas en toda tu red.",
+        "accent": "blue",
+        "featured": true
+      },
+      {
+        "number": "02",
+        "tag": "Campo",
+        "title": "Operaciones de Campo y Activos",
+        "description": "Utilización de equipos, seguimiento de ubicación y coordinación de equipos en campo en tiempo real.",
+        "accent": "green"
+      },
+      {
+        "number": "03",
+        "tag": "Ventas",
+        "title": "Operaciones Comerciales",
+        "description": "Visibilidad del pipeline, enrutamiento de leads y seguimiento automatizado en tu stack de CRM.",
+        "accent": "coral"
+      },
+      {
+        "number": "04",
+        "tag": "Producción",
+        "title": "Producción y Rendimiento",
+        "description": "Tableros de producción diaria, métricas de calidad e identificación de cuellos de botella.",
+        "accent": "amber"
+      },
+      {
+        "number": "05",
+        "tag": "Proyectos",
+        "title": "Gestión de Clientes y Proyectos",
+        "description": "Líneas de tiempo centralizadas, registros de comunicación con clientes y alertas de hitos de entrega.",
+        "accent": "navy"
+      }
+    ]
+  }
+}

@@ -1,13 +1,8 @@
-export function Solution() {
-  const maturitySteps = [
-    'Scattered data',
-    'Structured data',
-    'Defined processes',
-    'Automations',
-    'Dashboards',
-    'Conversational access',
-    'Digital agents',
-  ];
+import { getTranslations } from 'next-intl/server';
+
+export async function Solution() {
+  const t = await getTranslations('solution');
+  const maturitySteps = t.raw('maturitySteps') as string[];
 
   return (
     <>
@@ -33,7 +28,7 @@ export function Solution() {
               id="method"
               className="font-display font-bold text-2xl sm:text-3xl lg:text-4xl text-white leading-tight"
             >
-              We&apos;re transparent with the stack: structure first, intelligence second.
+              {t('bannerTitle')}
             </h2>
           </div>
         </div>
@@ -41,9 +36,9 @@ export function Solution() {
 
       <section className="section-cream-alt section-pad">
         <div className="section-inner">
-          <p className="hand-label mb-4">The maturity track</p>
+          <p className="hand-label mb-4">{t('maturityLabel')}</p>
           <h3 className="font-display font-bold text-3xl sm:text-4xl text-[var(--ink)] tracking-tight mb-12 max-w-xl">
-            The Maturity Track
+            {t('maturityTitle')}
           </h3>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-7 gap-8 lg:gap-6">
@@ -58,8 +53,7 @@ export function Solution() {
           </div>
 
           <p className="mt-14 text-base text-[var(--ink-muted)] max-w-2xl leading-relaxed">
-            VasaVant guides your organization through this progression, building each layer
-            systematically until you achieve full operational intelligence.
+            {t('maturityFooter')}
           </p>
         </div>
       </section>

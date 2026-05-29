@@ -1,12 +1,18 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { useTranslations } from 'next-intl';
 import { Button } from '@/components/ui/Button';
 import { VasaVantLogo } from '@/components/ui/VasaVantLogo';
-import { navLinks } from '@/lib/content';
+import { Link } from '@/i18n/navigation';
+import { LanguageSwitcher } from '@/components/layout/LanguageSwitcher';
+import { getNavLinks } from '@/lib/messages';
 
 export function Navigation() {
   const [scrolled, setScrolled] = useState(false);
+  const t = useTranslations('nav');
+  const tContent = useTranslations('content');
+  const navLinks = getNavLinks(tContent.raw('navLinks'));
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 16);
@@ -24,14 +30,14 @@ export function Navigation() {
     >
       <div className="section-inner">
         <div className="flex items-center justify-between h-16 lg:h-[4.5rem]">
-          <a href="#" className="flex items-center">
+          <Link href="/" className="flex items-center">
             <VasaVantLogo />
-          </a>
+          </Link>
 
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
               <a
-                key={link.name}
+                key={link.href}
                 href={link.href}
                 className="text-sm font-medium text-[var(--ink-muted)] hover:text-[var(--ink)] transition-colors"
               >
@@ -40,9 +46,12 @@ export function Navigation() {
             ))}
           </div>
 
-          <Button variant="primary" size="sm" href="#cta">
-            Get started
-          </Button>
+          <div className="flex items-center gap-3">
+            <LanguageSwitcher />
+            <Button variant="primary" size="sm" href="#cta">
+              {t('getStarted')}
+            </Button>
+          </div>
         </div>
       </div>
     </nav>

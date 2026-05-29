@@ -1,0 +1,210 @@
+{
+  "metadata": {
+    "title": "VasaVant: Operational Intelligence Studio",
+    "description": "Turn scattered data and manual workflows into structured intelligence systems."
+  },
+  "nav": {
+    "getStarted": "Get started",
+    "seeHowItWorks": "See how it works"
+  },
+  "languageSwitcher": {
+    "label": "Language",
+    "es": "ES",
+    "en": "EN"
+  },
+  "hero": {
+    "titleLine1": "Does your business",
+    "titleLine2": "actually run on intelligence?",
+    "subtitle": "VasaVant turns scattered data and manual workflows into structured intelligence systems you can query, automate, and operate through AI-assisted agents.",
+    "imageAlt": "Team collaborating on operational workflows with dashboards and connected tools"
+  },
+  "problem": {
+    "label": "The problem",
+    "titleLine1": "Obsessed with outcomes,",
+    "titleLine2": "not scattered apps",
+    "description": "Most companies run on controlled chaos: critical information in silos, workflows dependent on manual intervention, operational visibility a constant luxury.",
+    "toolsLabel": "Built with tools you already use",
+    "imageAlt": "Scattered business tools flowing into a unified operational intelligence system"
+  },
+  "testimonial": {
+    "quote": "The agent is only as useful as the system underneath it. We structure the operation first, then deploy intelligence.",
+    "brandName": "VasaVant",
+    "brandTagline": "Operational Intelligence Studio",
+    "role": "Operations lead",
+    "industry": "Mid-market logistics",
+    "imageAlt": "Abstract editorial portrait representing a VasaVant client voice"
+  },
+  "solution": {
+    "bannerTitle": "We're transparent with the stack: structure first, intelligence second.",
+    "maturityLabel": "The maturity track",
+    "maturityTitle": "The Maturity Track",
+    "maturitySteps": [
+      "Scattered data",
+      "Structured data",
+      "Defined processes",
+      "Automations",
+      "Dashboards",
+      "Conversational access",
+      "Digital agents"
+    ],
+    "maturityFooter": "VasaVant guides your organization through this progression, building each layer systematically until you achieve full operational intelligence."
+  },
+  "howWeWork": {
+    "label": "Our process",
+    "title": "How we work",
+    "footerPrefix": "Typical deployment:",
+    "footerWeeks": "4-12 weeks",
+    "footerSuffix": "depending on scope. Full eight-step execution available on engagement."
+  },
+  "services": {
+    "label": "Capabilities",
+    "title": "Two models, one mission for you",
+    "getStarted": "Get started",
+    "alsoIncluded": "Also included"
+  },
+  "useCases": {
+    "label": "Use cases",
+    "title": "Built for real operations",
+    "subtitle": "Five industries we ship for most often. Same method, different operational shape.",
+    "learnMore": "Learn more"
+  },
+  "finalCta": {
+    "title": "Ready to transform your everyday?",
+    "description": "Turn scattered operations into structured intelligence. We'll help you build the operational layer for AI-assisted execution.",
+    "getStarted": "Get started",
+    "imageAlt": "Person at a desk with connected workflow and application icons"
+  },
+  "footer": {
+    "tagline": "Your workflow, but smarter.",
+    "description": "Operational intelligence systems for real-world businesses.",
+    "servicesTitle": "Services",
+    "companyTitle": "Company",
+    "contactTitle": "Contact",
+    "serviceLinks": {
+      "intelligenceSystems": "Intelligence Systems",
+      "dataAutomation": "Data Automation",
+      "conversationalBi": "Conversational BI",
+      "agenticOperations": "Agentic Operations"
+    },
+    "companyLinks": {
+      "theProblem": "The Problem",
+      "theMethod": "The Method",
+      "useCases": "Use Cases",
+      "process": "Process"
+    },
+    "emailAria": "Email",
+    "shareAria": "Share",
+    "copyright": "All rights reserved."
+  },
+  "content": {
+    "navLinks": [
+      { "name": "Problem", "href": "#problem" },
+      { "name": "Method", "href": "#method" },
+      { "name": "Services", "href": "#services" },
+      { "name": "Use Cases", "href": "#use-cases" },
+      { "name": "Process", "href": "#process" }
+    ],
+    "heroStats": [
+      { "value": "4-12", "label": "weeks to deploy" },
+      { "value": "6+", "label": "capabilities built" },
+      { "value": "100%", "label": "custom systems" },
+      { "value": "∞", "label": "continuous iteration" }
+    ],
+    "trustedTools": [
+      "WhatsApp",
+      "Airtable",
+      "n8n",
+      "Make",
+      "Zapier",
+      "PostgreSQL"
+    ],
+    "processPillars": [
+      {
+        "title": "Map the operation",
+        "description": "Understand workflows, data sources, and where decisions actually happen.",
+        "icon": "search"
+      },
+      {
+        "title": "Structure the data",
+        "description": "Unified schemas and process rules so intelligence has something solid to run on.",
+        "icon": "layers"
+      },
+      {
+        "title": "Automate & report",
+        "description": "Dashboards, triggers, and routing that remove manual reporting overhead.",
+        "icon": "clock"
+      },
+      {
+        "title": "Deploy agents",
+        "description": "Conversational access and autonomous execution on top of your operational layer.",
+        "icon": "bot"
+      }
+    ],
+    "featuredServices": [
+      {
+        "title": "Conversational Business Intelligence",
+        "subtitle": "Query your operation from WhatsApp",
+        "description": "Ask your business what is happening and get an answer. Natural-language access to operational data without opening another dashboard.",
+        "bullets": [
+          "Instant answers from live operational data",
+          "No new app for your team to learn",
+          "Built on structured, auditable sources"
+        ]
+      },
+      {
+        "title": "Agentic Operations",
+        "subtitle": "Autonomous execution on solid architecture",
+        "description": "Digital agents that navigate internal systems, parse documents, update records, and run repetitive administration.",
+        "bullets": [
+          "Document parsing and record updates",
+          "Workflow triggers and task routing",
+          "Rock-solid data layer underneath"
+        ]
+      }
+    ],
+    "coreCapabilities": [
+      "Operational intelligence systems",
+      "Data automation & workflow design",
+      "Business dashboards & reporting",
+      "Internal tools & lightweight apps"
+    ],
+    "useCaseCards": [
+      {
+        "number": "01",
+        "tag": "Logistics",
+        "title": "Logistics & Trucking",
+        "description": "Fleet tracking, trip logging, maintenance scheduling, and delivery optimization across your entire network.",
+        "accent": "blue",
+        "featured": true
+      },
+      {
+        "number": "02",
+        "tag": "Field Ops",
+        "title": "Field Operations & Assets",
+        "description": "Equipment utilization, location tracking, and field team coordination in real time.",
+        "accent": "green"
+      },
+      {
+        "number": "03",
+        "tag": "Sales",
+        "title": "Sales Operations",
+        "description": "Pipeline visibility, lead routing, and automated follow-up across your CRM stack.",
+        "accent": "coral"
+      },
+      {
+        "number": "04",
+        "tag": "Production",
+        "title": "Production & Yield",
+        "description": "Daily production dashboards, quality metrics, and bottleneck identification.",
+        "accent": "amber"
+      },
+      {
+        "number": "05",
+        "tag": "Projects",
+        "title": "Client & Project Management",
+        "description": "Centralized timelines, client communication logs, and delivery milestone alerts.",
+        "accent": "navy"
+      }
+    ]
+  }
+}

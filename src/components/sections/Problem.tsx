@@ -1,28 +1,33 @@
+import { getTranslations } from 'next-intl/server';
 import { GeneratedIllustration } from '@/components/ui/GeneratedIllustration';
-import { heroStats, trustedTools } from '@/lib/content';
+import { getHeroStats, getTrustedTools } from '@/lib/messages';
 
-export function Problem() {
+export async function Problem() {
+  const t = await getTranslations('problem');
+  const tContent = await getTranslations('content');
+  const heroStats = getHeroStats(tContent.raw('heroStats'));
+  const trustedTools = getTrustedTools(tContent.raw('trustedTools'));
+
   return (
     <section id="problem" className="section-cream-alt section-pad">
       <div className="section-inner">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-16 lg:mb-20">
           <div>
-            <p className="hand-label mb-4">The problem</p>
+            <p className="hand-label mb-4">{t('label')}</p>
             <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-[2.75rem] tracking-tight text-[var(--ink)] leading-tight mb-6">
-              Obsessed with outcomes,
+              {t('titleLine1')}
               <br />
-              not scattered apps
+              {t('titleLine2')}
             </h2>
             <p className="text-lg text-[var(--ink-muted)] leading-relaxed max-w-lg">
-              Most companies run on controlled chaos: critical information in silos, workflows
-              dependent on manual intervention, operational visibility a constant luxury.
+              {t('description')}
             </p>
           </div>
 
           <div className="relative">
             <GeneratedIllustration
               src="/images/operations-map.png"
-              alt="Scattered business tools flowing into a unified operational intelligence system"
+              alt={t('imageAlt')}
               width={1200}
               height={1200}
             />
@@ -41,7 +46,7 @@ export function Problem() {
         </div>
 
         <div className="sticker-card px-6 py-8 lg:px-10 lg:py-10">
-          <p className="hand-label text-center mb-6">Built with tools you already use</p>
+          <p className="hand-label text-center mb-6">{t('toolsLabel')}</p>
           <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-4">
             {trustedTools.map((tool) => (
               <span

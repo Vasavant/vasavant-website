@@ -1,7 +1,8 @@
 import { ArrowUpRight } from 'lucide-react';
+import { getTranslations } from 'next-intl/server';
 import { DoodleDecor } from '@/components/ui/DoodleDecor';
-import type { UseCaseAccent, UseCaseCard } from '@/lib/content';
-import { useCaseCards } from '@/lib/content';
+import type { UseCaseAccent, UseCaseCard } from '@/lib/content-types';
+import { getUseCaseCards } from '@/lib/messages';
 import { cn } from '@/lib/utils';
 
 const accentStyles: Record<
@@ -44,10 +45,12 @@ function UseCaseTile({
   useCase,
   className,
   tilt = false,
+  learnMoreLabel,
 }: {
   useCase: UseCaseCard;
   className?: string;
   tilt?: boolean;
+  learnMoreLabel: string;
 }) {
   const styles = accentStyles[useCase.accent];
   const isFeatured = useCase.featured === true;
@@ -110,7 +113,7 @@ function UseCaseTile({
           href="#cta"
           className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--ink)] group-hover:text-[var(--cta)] transition-colors w-fit"
         >
-          Learn more
+          {learnMoreLabel}
           <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
         </a>
       </div>
@@ -118,7 +121,11 @@ function UseCaseTile({
   );
 }
 
-export function UseCases() {
+export async function UseCases() {
+  const t = await getTranslations('useCases');
+  const tContent = await getTranslations('content');
+  const useCaseCards = getUseCaseCards(tContent.raw('useCaseCards'));
+
   const [featured, ...rest] = useCaseCards;
   const [fieldOps, sales, production, projects] = rest;
 
@@ -140,38 +147,46 @@ export function UseCases() {
       <div className="section-inner relative">
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-12 lg:mb-16">
           <div className="max-w-xl">
-            <p className="hand-label mb-4">Use cases</p>
+            <p className="hand-label mb-4">{t('label')}</p>
             <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-[2.75rem] tracking-tight text-[var(--ink)] leading-tight">
-              Built for real operations
+              {t('title')}
             </h2>
           </div>
           <p className="text-base text-[var(--ink-muted)] max-w-sm leading-relaxed lg:text-right">
-            Five industries we ship for most often. Same method, different operational shape.
+            {t('subtitle')}
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-4 lg:gap-5 auto-rows-auto">
           <UseCaseTile
             useCase={featured}
+            learnMoreLabel={t('learnMore')}
             className="md:col-span-2 lg:col-span-7 lg:row-span-2 min-h-[280px] lg:min-h-[340px]"
           />
 
           <UseCaseTile
             useCase={fieldOps}
+            learnMoreLabel={t('learnMore')}
             tilt
             className="lg:col-span-5 lg:col-start-8 lg:row-start-1"
           />
 
-          <UseCaseTile useCase={sales} className="lg:col-span-5 lg:col-start-8 lg:row-start-2" />
+          <UseCaseTile
+            useCase={sales}
+            learnMoreLabel={t('learnMore')}
+            className="lg:col-span-5 lg:col-start-8 lg:row-start-2"
+          />
 
           <UseCaseTile
             useCase={production}
+            learnMoreLabel={t('learnMore')}
             tilt
             className="md:col-span-1 lg:col-span-4 lg:row-start-3"
           />
 
           <UseCaseTile
             useCase={projects}
+            learnMoreLabel={t('learnMore')}
             className="md:col-span-1 lg:col-span-8 lg:col-start-5 lg:row-start-3 bg-[var(--paper)]"
           />
         </div>

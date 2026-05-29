@@ -1,30 +1,33 @@
 import { Mail, Share2 } from 'lucide-react';
+import { getTranslations } from 'next-intl/server';
 import { VasaVantLogo } from '@/components/ui/VasaVantLogo';
+import { Link } from '@/i18n/navigation';
 
-export function Footer() {
+export async function Footer() {
   const currentYear = new Date().getFullYear();
+  const t = await getTranslations('footer');
 
   const columns = [
     {
-      title: 'Services',
+      title: t('servicesTitle'),
       links: [
-        { label: 'Intelligence Systems', href: '#services' },
-        { label: 'Data Automation', href: '#services' },
-        { label: 'Conversational BI', href: '#services' },
-        { label: 'Agentic Operations', href: '#services' },
+        { label: t('serviceLinks.intelligenceSystems'), href: '#services' },
+        { label: t('serviceLinks.dataAutomation'), href: '#services' },
+        { label: t('serviceLinks.conversationalBi'), href: '#services' },
+        { label: t('serviceLinks.agenticOperations'), href: '#services' },
       ],
     },
     {
-      title: 'Company',
+      title: t('companyTitle'),
       links: [
-        { label: 'The Problem', href: '#problem' },
-        { label: 'The Method', href: '#method' },
-        { label: 'Use Cases', href: '#use-cases' },
-        { label: 'Process', href: '#process' },
+        { label: t('companyLinks.theProblem'), href: '#problem' },
+        { label: t('companyLinks.theMethod'), href: '#method' },
+        { label: t('companyLinks.useCases'), href: '#use-cases' },
+        { label: t('companyLinks.process'), href: '#process' },
       ],
     },
     {
-      title: 'Contact',
+      title: t('contactTitle'),
       links: [{ label: 'hello@vasavant.com', href: 'mailto:hello@vasavant.com' }],
     },
   ];
@@ -34,15 +37,13 @@ export function Footer() {
       <div className="section-inner pt-16 pb-8">
         <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-12 mb-16">
           <div className="max-w-xs">
-            <a href="#" className="inline-flex mb-5 opacity-90 hover:opacity-100 transition-opacity">
+            <Link href="/" className="inline-flex mb-5 opacity-90 hover:opacity-100 transition-opacity">
               <VasaVantLogo variant="on-dark" />
-            </a>
+            </Link>
             <p className="font-display font-semibold text-lg text-white mb-2">
-              Your workflow, but smarter.
+              {t('tagline')}
             </p>
-            <p className="text-sm text-white/60 leading-relaxed">
-              Operational intelligence systems for real-world businesses.
-            </p>
+            <p className="text-sm text-white/60 leading-relaxed">{t('description')}</p>
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-10">
@@ -73,20 +74,20 @@ export function Footer() {
             <a
               href="mailto:hello@vasavant.com"
               className="inline-flex items-center justify-center w-9 h-9 rounded-lg border border-white/15 text-white/70 hover:text-white hover:border-white/30 transition-colors"
-              aria-label="Email"
+              aria-label={t('emailAria')}
             >
               <Mail className="w-4 h-4" />
             </a>
             <a
               href="#"
               className="inline-flex items-center justify-center w-9 h-9 rounded-lg border border-white/15 text-white/70 hover:text-white hover:border-white/30 transition-colors"
-              aria-label="Share"
+              aria-label={t('shareAria')}
             >
               <Share2 className="w-4 h-4" />
             </a>
           </div>
           <p className="text-xs text-white/50">
-            &copy; {currentYear} VasaVant. All rights reserved.
+            &copy; {currentYear} VasaVant. {t('copyright')}
           </p>
         </div>
       </div>
