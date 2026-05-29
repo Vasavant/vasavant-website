@@ -1,9 +1,9 @@
 import { hasLocale } from 'next-intl';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { SiteShell } from '@/components/layout/SiteShell';
 import { PageCta } from '@/components/pages/PageCta';
+import { UseCaseBreadcrumbJsonLd } from '@/components/seo/UseCaseBreadcrumbJsonLd';
 import { UseCaseDetailContent } from '@/components/pages/UseCaseDetailContent';
 import type { UseCaseDetailContent as UseCaseDetailType } from '@/lib/content-types';
 import { routing, type Locale } from '@/i18n/routing';
@@ -13,6 +13,8 @@ import {
   resolveUseCaseSlug,
   type UseCaseSlug,
 } from '@/lib/routes';
+import { getPathname } from '@/i18n/navigation';
+import { buildPageMetadata } from '@/lib/seo';
 
 type Props = {
   params: Promise<{ locale: string; slug: string }>;
@@ -57,18 +59,27 @@ export function generateStaticParams() {
   );
 }
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export async function generateMetadata({ params }: Props) {
   const { locale, slug: slugParam } = await params;
   if (!hasLocale(routing.locales, locale)) return {};
 
   const useCaseKey = resolveUseCaseSlug(locale, slugParam);
   if (!useCaseKey) return {};
 
-  const detail = await getDetail(locale, useCaseKey);
-  return {
+  const detail = await getDetail(locale as Locale, useCaseKey);
+  return buildPageMetadata({
+    locale: locale as Locale,
+    getLocalizedPath: (targetLocale) =>
+      getPathname({
+        locale: targetLocale,
+        href: {
+          pathname: '/use-cases/[slug]',
+          params: { slug: getLocalizedUseCaseSlug(targetLocale, useCaseKey) },
+        },
+      }),
     title: detail.meta.title,
     description: detail.meta.description,
-  };
+  });
 }
 
 export default async function UseCaseDetailPage({ params }: Props) {
@@ -83,6 +94,11 @@ export default async function UseCaseDetailPage({ params }: Props) {
 
   return (
     <SiteShell>
+      <UseCaseBreadcrumbJsonLd
+        locale={locale as Locale}
+        slugParam={slugParam}
+        title={detail.hero.title}
+      />
       <UseCaseDetailContent slug={useCaseKey} content={detail} />
       <PageCta />
     </SiteShell>

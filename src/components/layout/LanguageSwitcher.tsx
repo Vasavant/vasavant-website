@@ -5,6 +5,7 @@ import { Link, usePathname } from '@/i18n/navigation';
 import { useParams } from 'next/navigation';
 import { cn } from '@/lib/utils';
 import type { Locale } from '@/i18n/routing';
+import { getBlogSlugForLocale } from '@/lib/blog-locale-map';
 import {
   getLocalizedUseCaseSlug,
   resolveUseCaseSlug,
@@ -12,14 +13,27 @@ import {
 
 const locales: Locale[] = ['es', 'en'];
 
-type StaticPathname = '/' | '/use-cases' | '/services' | '/process' | '/contact';
+type StaticPathname =
+  | '/'
+  | '/use-cases'
+  | '/services'
+  | '/process'
+  | '/contact'
+  | '/terms'
+  | '/privacy'
+  | '/blog';
+
+type LocaleSwitchHref =
+  | StaticPathname
+  | { pathname: '/use-cases/[slug]'; params: { slug: string } }
+  | { pathname: '/blog/[slug]'; params: { slug: string } };
 
 function getLocaleSwitchHref(
   pathname: string,
   params: Record<string, string | string[] | undefined>,
   currentLocale: Locale,
   targetLocale: Locale
-): StaticPathname | { pathname: '/use-cases/[slug]'; params: { slug: string } } {
+): LocaleSwitchHref {
   if (pathname === '/use-cases/[slug]') {
     const slugParam = params.slug;
     if (typeof slugParam === 'string') {
@@ -33,12 +47,32 @@ function getLocaleSwitchHref(
     }
   }
 
+  if (pathname === '/blog/[slug]') {
+    const slugParam = params.slug;
+    if (typeof slugParam === 'string') {
+      const targetSlug = getBlogSlugForLocale(
+        currentLocale,
+        slugParam,
+        targetLocale
+      );
+      if (targetSlug) {
+        return {
+          pathname: '/blog/[slug]',
+          params: { slug: targetSlug },
+        };
+      }
+    }
+  }
+
   const staticPaths: StaticPathname[] = [
     '/',
     '/use-cases',
     '/services',
     '/process',
     '/contact',
+    '/terms',
+    '/privacy',
+    '/blog',
   ];
 
   if (staticPaths.includes(pathname as StaticPathname)) {

@@ -1,26 +1,28 @@
 import { hasLocale } from 'next-intl';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { SiteShell } from '@/components/layout/SiteShell';
 import { PageHero } from '@/components/pages/PageHero';
 import { PageCta } from '@/components/pages/PageCta';
 import { ProcessStepsTimeline } from '@/components/pages/ProcessStepsTimeline';
 import { HowWeWork } from '@/components/sections/HowWeWork';
-import { routing } from '@/i18n/routing';
+import { routing, type Locale } from '@/i18n/routing';
+import { buildPageMetadata, staticLocalizedPath } from '@/lib/seo';
 
 type Props = {
   params: Promise<{ locale: string }>;
 };
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export async function generateMetadata({ params }: Props) {
   const { locale } = await params;
   if (!hasLocale(routing.locales, locale)) return {};
   const t = await getTranslations({ locale, namespace: 'pages.process' });
-  return {
+  return buildPageMetadata({
+    locale: locale as Locale,
+    getLocalizedPath: staticLocalizedPath('/process'),
     title: t('meta.title'),
     description: t('meta.description'),
-  };
+  });
 }
 
 export default async function ProcessPage({ params }: Props) {

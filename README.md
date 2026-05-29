@@ -94,6 +94,30 @@ vasavant-website/
 └── public/                       # Static assets
 ```
 
+## SEO and production URL
+
+Set the canonical site URL in production (required for correct `canonical`, Open Graph, and `sitemap.xml` URLs):
+
+```bash
+NEXT_PUBLIC_SITE_URL=https://vasavant.com
+```
+
+### Google Search Console (Venezuela focus)
+
+1. Add and verify the domain property in [Google Search Console](https://search.google.com/search-console).
+2. Submit `https://your-domain/sitemap.xml`.
+3. Under **Settings → International targeting**, set the target country to **Venezuela** if that is your primary market.
+4. Monitor queries such as *whatsapp operaciones*, *logística software*, and *inteligencia operacional*; iterate post titles from **Recursos** / **Blog**.
+
+Geo signals on the site are intentionally subtle in visible copy (Spanish default, operational verticals, GMT-6 contact note). Structured data may include `areaServed` without naming the country on pages.
+
+### Blog / Recursos (MDX)
+
+Articles live in `content/blog/{es,en}/`. When adding a post:
+
+1. Create matching ES and EN files with the same `translationKey` in frontmatter.
+2. Add slug mapping in [`src/lib/blog-locale-map.ts`](src/lib/blog-locale-map.ts) for the language switcher.
+
 ## 🚀 Getting Started
 
 ### Development

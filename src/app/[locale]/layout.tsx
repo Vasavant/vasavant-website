@@ -9,7 +9,9 @@ import {
 import { notFound } from "next/navigation";
 import { hasLocale } from "next-intl";
 import { CookieBanner } from "@/components/layout/CookieBanner";
+import { GlobalJsonLd } from "@/components/seo/GlobalJsonLd";
 import { routing, type Locale } from "@/i18n/routing";
+import { buildPageMetadata, staticLocalizedPath } from "@/lib/seo";
 import "../globals.css";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
@@ -55,16 +57,12 @@ export async function generateMetadata({
 
   const t = await getTranslations({ locale, namespace: "metadata" });
 
-  return {
+  return buildPageMetadata({
+    locale,
+    getLocalizedPath: staticLocalizedPath("/"),
     title: t("title"),
     description: t("description"),
-    alternates: {
-      languages: {
-        es: "/",
-        en: "/en",
-      },
-    },
-  };
+  });
 }
 
 export default async function LocaleLayout({ children, params }: Props) {
@@ -83,6 +81,7 @@ export default async function LocaleLayout({ children, params }: Props) {
       className={`${plusJakartaSans.variable} ${inter.variable} ${jetbrainsMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+        <GlobalJsonLd />
         <NextIntlClientProvider messages={messages}>
           {children}
           <CookieBanner />

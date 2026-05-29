@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "VasaVant: Estudio de Inteligencia Operacional",
-    "description": "Convierte datos dispersos y flujos manuales en sistemas de inteligencia estructurados."
+    "description": "Sistemas de inteligencia operacional para empresas medianas: WhatsApp, ERP, logística y operaciones de campo."
   },
   "nav": {
     "getStarted": "Comenzar",
@@ -113,7 +113,8 @@
       "theProblem": "El problema",
       "theMethod": "El método",
       "useCases": "Casos de uso",
-      "process": "Proceso"
+      "process": "Proceso",
+      "resources": "Recursos"
     },
     "emailAria": "Correo",
     "shareAria": "Compartir",
@@ -289,7 +290,7 @@
     "useCases": {
       "meta": {
         "title": "Casos de uso | VasaVant",
-        "description": "Cinco industrias donde desplegamos inteligencia operacional con el mismo método."
+        "description": "Logística, operaciones de campo y comercial: inteligencia operacional con WhatsApp, ERP y datos estructurados."
       },
       "hero": {
         "eyebrow": "Casos de uso",
@@ -302,7 +303,7 @@
       "logistics": {
         "meta": {
           "title": "Logística y Transporte | VasaVant",
-          "description": "Seguimiento de flota, viajes y entregas con inteligencia operacional estructurada."
+          "description": "Flota, viajes y entregas: unifica WhatsApp, hojas y ERP en tableros y consultas operativas para logística mid-market."
         },
         "hero": {
           "eyebrow": "Logística",
@@ -463,7 +464,7 @@
     "services": {
       "meta": {
         "title": "Servicios | VasaVant",
-        "description": "Inteligencia conversacional, operaciones agénticas y capacidades operacionales a medida."
+        "description": "Inteligencia conversacional, automatización y tableros sobre WhatsApp, ERP y datos de campo para empresas medianas."
       },
       "hero": {
         "eyebrow": "Capacidades",
@@ -500,6 +501,23 @@
       },
       "emailLabel": "Correo",
       "responseTime": "Respuesta habitual en 1–2 días hábiles (GMT-6)."
+    },
+    "blog": {
+      "meta": {
+        "title": "Recursos | VasaVant",
+        "description": "Guías sobre WhatsApp operativo, logística mid-market y madurez de datos para equipos que operan con ERP y hojas de cálculo."
+      },
+      "hero": {
+        "eyebrow": "Recursos",
+        "title": "Inteligencia operacional en la práctica",
+        "subtitle": "Ideas y marcos para estructurar operaciones reales—sin reemplazar las herramientas que ya usas.",
+        "imageAlt": "Artículos sobre operaciones, datos y automatización"
+      },
+      "empty": "Próximamente publicaremos más recursos.",
+      "readMore": "Leer artículo",
+      "backToIndex": "Volver a recursos",
+      "faqTitle": "Preguntas frecuentes",
+      "relatedUseCase": "Ver caso de uso: {title}"
     },
     "terms": {
       "meta": {

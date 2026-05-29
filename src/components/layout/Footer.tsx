@@ -91,6 +91,11 @@ export async function Footer() {
                     {t('companyLinks.process')}
                   </Link>
                 </li>
+                <li>
+                  <Link href="/blog" className="footer-link">
+                    {t('companyLinks.resources')}
+                  </Link>
+                </li>
               </ul>
             </div>
 
