@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+:root {
+  --paper: #f6f0e3;
+  --paper-light: #fbf4e6;
+  --ink: #0a0f14;
+  --ink-muted: #4a5568;
+  --ink-soft: #6b7280;
+  --navy: #071a2d;
+  --navy-elevated: #0d2438;
+  --cta: #2563eb;
+  --cta-hover: #1d4ed8;
+  --accent-red: #e85d4c;
+  --accent-yellow: #f5c842;
+  --border-ink: rgba(10, 15, 20, 0.1);
+  --border-ink-strong: rgba(10, 15, 20, 0.16);
+
+  --spacing-section: 6rem;
+  --spacing-section-lg: 8rem;
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-paper-light: var(--paper-light);
+  --color-ink: var(--ink);
+  --color-ink-muted: var(--ink-muted);
+  --color-navy: var(--navy);
+  --color-cta: var(--cta);
+  --font-display: var(--font-plus-jakarta);
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-jetbrains-mono);
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.section-cream {
+  background: var(--paper);
+}
+
+.section-cream-alt {
+  background: var(--paper-light);
+}
+
+.section-navy {
+  background: var(--navy);
+  color: #f8fafc;
+}
+
+.section-inner {
+  max-width: 72rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  .section-inner {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+.section-pad {
+  padding-top: var(--spacing-section);
+  padding-bottom: var(--spacing-section);
+}
+
+@media (min-width: 1024px) {
+  .section-pad {
+    padding-top: var(--spacing-section-lg);
+    padding-bottom: var(--spacing-section-lg);
+  }
+}
+
+.editorial-divider {
+  border-top: 1px solid var(--border-ink);
+}
+
+.sticker-card {
+  background: #fff;
+  border: 1px solid var(--border-ink);
+  border-radius: 1rem;
+  box-shadow: 0 1px 0 rgba(10, 15, 20, 0.04);
+}
+
+.sticker-card-dark {
+  background: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 1.25rem;
+  color: var(--ink);
+}
+
+.hand-label {
+  font-size: 0.6875rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.55s ease-out forwards;
+}
