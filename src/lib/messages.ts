@@ -1,6 +1,8 @@
 import type {
+  NavItem,
   NavLink,
   ProcessPillar,
+  ProcessStep,
   ServiceCard,
   StatItem,
   UseCaseCard,
@@ -34,4 +36,12 @@ export function getCoreCapabilities(raw: unknown): string[] {
 
 export function getUseCaseCards(raw: unknown): UseCaseCard[] {
   return raw as UseCaseCard[];
+}
+
+export function getNavItems(raw: unknown): NavItem[] {
+  return raw as NavItem[];
+}
+
+export function getProcessSteps(raw: unknown): ProcessStep[] {
+  return raw as ProcessStep[];
 }

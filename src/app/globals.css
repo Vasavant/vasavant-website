@@ -118,3 +118,14 @@ body {
 .animate-fade-in-up {
   animation: fadeInUp 0.55s ease-out forwards;
 }
+
+.footer-link {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: rgba(255, 255, 255, 0.7);
+  transition: color 0.2s;
+}
+
+.footer-link:hover {
+  color: #fff;
+}

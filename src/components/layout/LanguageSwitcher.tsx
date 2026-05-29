@@ -2,14 +2,56 @@
 
 import { useLocale, useTranslations } from 'next-intl';
 import { Link, usePathname } from '@/i18n/navigation';
+import { useParams } from 'next/navigation';
 import { cn } from '@/lib/utils';
 import type { Locale } from '@/i18n/routing';
+import {
+  getLocalizedUseCaseSlug,
+  resolveUseCaseSlug,
+} from '@/lib/routes';
 
 const locales: Locale[] = ['es', 'en'];
+
+type StaticPathname = '/' | '/use-cases' | '/services' | '/process' | '/contact';
+
+function getLocaleSwitchHref(
+  pathname: string,
+  params: Record<string, string | string[] | undefined>,
+  currentLocale: Locale,
+  targetLocale: Locale
+): StaticPathname | { pathname: '/use-cases/[slug]'; params: { slug: string } } {
+  if (pathname === '/use-cases/[slug]') {
+    const slugParam = params.slug;
+    if (typeof slugParam === 'string') {
+      const useCaseKey = resolveUseCaseSlug(currentLocale, slugParam);
+      if (useCaseKey) {
+        return {
+          pathname: '/use-cases/[slug]',
+          params: { slug: getLocalizedUseCaseSlug(targetLocale, useCaseKey) },
+        };
+      }
+    }
+  }
+
+  const staticPaths: StaticPathname[] = [
+    '/',
+    '/use-cases',
+    '/services',
+    '/process',
+    '/contact',
+  ];
+
+  if (staticPaths.includes(pathname as StaticPathname)) {
+    return pathname as StaticPathname;
+  }
+
+  return '/';
+}
 
 export function LanguageSwitcher() {
   const locale = useLocale() as Locale;
   const pathname = usePathname();
+  const params = useParams();
   const t = useTranslations('languageSwitcher');
 
   return (
@@ -21,7 +63,7 @@ export function LanguageSwitcher() {
       {locales.map((code) => (
         <Link
           key={code}
-          href={pathname}
+          href={getLocaleSwitchHref(pathname, params, locale, code)}
           locale={code}
           className={cn(
             'px-2.5 py-1 text-xs font-semibold rounded-md transition-colors',

@@ -5,7 +5,30 @@
   },
   "nav": {
     "getStarted": "Comenzar",
-    "seeHowItWorks": "Ver cómo funciona"
+    "seeHowItWorks": "Ver cómo funciona",
+    "useCases": "Casos de uso",
+    "services": "Servicios",
+    "process": "Proceso",
+    "contact": "Contacto",
+    "viewAllUseCases": "Ver todos",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú",
+    "items": [
+      {
+        "label": "Casos de uso",
+        "href": "/use-cases",
+        "children": [
+          { "label": "Logística y Transporte", "slug": "logistics" },
+          { "label": "Operaciones de Campo", "slug": "field-operations" },
+          { "label": "Operaciones Comerciales", "slug": "commercial-operations" },
+          { "label": "Producción y Rendimiento", "slug": "production" },
+          { "label": "Clientes y Proyectos", "slug": "client-projects" }
+        ]
+      },
+      { "label": "Servicios", "href": "/services" },
+      { "label": "Proceso", "href": "/process" },
+      { "label": "Contacto", "href": "/contact" }
+    ]
   },
   "languageSwitcher": {
     "label": "Idioma",
@@ -168,8 +191,43 @@
       "Tableros y reportes de negocio",
       "Herramientas internas y apps ligeras"
     ],
+    "processSteps": [
+      {
+        "title": "Diagnóstico operativo",
+        "description": "Mapeo de flujos, silos de datos y puntos de decisión críticos."
+      },
+      {
+        "title": "Arquitectura de datos",
+        "description": "Modelo unificado, reglas de negocio y fuentes de verdad."
+      },
+      {
+        "title": "Integraciones",
+        "description": "Conexión con WhatsApp, CRM, ERP y herramientas existentes."
+      },
+      {
+        "title": "Automatizaciones",
+        "description": "Disparadores, enrutamiento y eliminación de trabajo manual repetitivo."
+      },
+      {
+        "title": "Tableros y alertas",
+        "description": "Visibilidad operativa en tiempo real para cada rol."
+      },
+      {
+        "title": "Acceso conversacional",
+        "description": "Consultas en lenguaje natural sobre datos estructurados."
+      },
+      {
+        "title": "Agentes digitales",
+        "description": "Ejecución asistida y autónoma sobre la capa operacional."
+      },
+      {
+        "title": "Iteración y escala",
+        "description": "Mejora continua, nuevos casos de uso y expansión por equipos."
+      }
+    ],
     "useCaseCards": [
       {
+        "slug": "logistics",
         "number": "01",
         "tag": "Logística",
         "title": "Logística y Transporte",
@@ -178,6 +236,7 @@
         "featured": true
       },
       {
+        "slug": "field-operations",
         "number": "02",
         "tag": "Campo",
         "title": "Operaciones de Campo y Activos",
@@ -185,6 +244,7 @@
         "accent": "green"
       },
       {
+        "slug": "commercial-operations",
         "number": "03",
         "tag": "Ventas",
         "title": "Operaciones Comerciales",
@@ -192,6 +252,7 @@
         "accent": "coral"
       },
       {
+        "slug": "production",
         "number": "04",
         "tag": "Producción",
         "title": "Producción y Rendimiento",
@@ -199,6 +260,7 @@
         "accent": "amber"
       },
       {
+        "slug": "client-projects",
         "number": "05",
         "tag": "Proyectos",
         "title": "Gestión de Clientes y Proyectos",
@@ -206,5 +268,227 @@
         "accent": "navy"
       }
     ]
+  },
+  "pages": {
+    "common": {
+      "ctaTitle": "¿Listo para estructurar tu operación?",
+      "ctaDescription": "Escríbenos y diseñamos la capa de inteligencia operacional para tu negocio.",
+      "ctaButton": "hello@vasavant.com"
+    },
+    "useCases": {
+      "meta": {
+        "title": "Casos de uso | VasaVant",
+        "description": "Cinco industrias donde desplegamos inteligencia operacional con el mismo método."
+      },
+      "hero": {
+        "eyebrow": "Casos de uso",
+        "title": "Hecho para operaciones reales",
+        "subtitle": "Mismo método, distinta forma operativa. Explora cómo estructuramos datos, flujos y agentes en cada industria.",
+        "imageAlt": "Collage editorial de cinco industrias operativas conectadas por un sistema unificado"
+      }
+    },
+    "useCaseDetail": {
+      "logistics": {
+        "meta": {
+          "title": "Logística y Transporte | VasaVant",
+          "description": "Seguimiento de flota, viajes y entregas con inteligencia operacional estructurada."
+        },
+        "hero": {
+          "eyebrow": "Logística",
+          "title": "Logística y Transporte",
+          "subtitle": "Visibilidad de flota, viajes y mantenimiento en un solo sistema consultable y automatizable.",
+          "imageAlt": "Ilustración de flota, rutas de entrega y tablero logístico unificado"
+        },
+        "challengesTitle": "Desafíos típicos",
+        "challenges": [
+          "Datos de viajes dispersos en WhatsApp, hojas y ERP",
+          "Mantenimiento reactivo sin alertas predictivas",
+          "Poca visibilidad de utilización por unidad o ruta"
+        ],
+        "outcomesTitle": "Qué logras",
+        "outcomes": [
+          "Registro unificado de viajes y estados en tiempo real",
+          "Alertas de mantenimiento y desvíos operativos",
+          "Consultas conversacionales sobre flota y entregas"
+        ],
+        "capabilitiesTitle": "Qué construimos",
+        "capabilities": [
+          "Tablero de flota y entregas",
+          "Automatización de registro de viajes",
+          "Integración WhatsApp + fuentes operativas",
+          "Agente de consulta logística"
+        ],
+        "imageAlt": "Flota y rutas conectadas a tablero operativo"
+      },
+      "field-operations": {
+        "meta": {
+          "title": "Operaciones de Campo | VasaVant",
+          "description": "Coordinación de equipos, activos y ubicación en tiempo real."
+        },
+        "hero": {
+          "eyebrow": "Campo",
+          "title": "Operaciones de Campo y Activos",
+          "subtitle": "Utilización de equipos, ubicación y coordinación de equipos desde una capa operacional única.",
+          "imageAlt": "Equipos en campo con activos geolocalizados y tablero de coordinación"
+        },
+        "challengesTitle": "Desafíos típicos",
+        "challenges": [
+          "Coordinación por mensajes sin registro estructurado",
+          "Activos sin historial de uso ni ubicación confiable",
+          "Reportes de campo llegando tarde o incompletos"
+        ],
+        "outcomesTitle": "Qué logras",
+        "outcomes": [
+          "Estado de activos y equipos visible al instante",
+          "Asignación y seguimiento de tareas en campo",
+          "Historial auditable por activo y por visita"
+        ],
+        "capabilitiesTitle": "Qué construimos",
+        "capabilities": [
+          "Registro móvil de visitas y activos",
+          "Mapa operativo y alertas de utilización",
+          "Flujos de aprobación en campo",
+          "Consultas por WhatsApp sobre estado de activos"
+        ],
+        "imageAlt": "Activos en campo con datos estructurados"
+      },
+      "commercial-operations": {
+        "meta": {
+          "title": "Operaciones Comerciales | VasaVant",
+          "description": "Pipeline, leads y seguimiento comercial sobre datos estructurados."
+        },
+        "hero": {
+          "eyebrow": "Ventas",
+          "title": "Operaciones Comerciales",
+          "subtitle": "Visibilidad del pipeline, enrutamiento de leads y seguimiento sin fricción en tu CRM.",
+          "imageAlt": "Pipeline comercial con leads enrutados y métricas de conversión"
+        },
+        "challengesTitle": "Desafíos típicos",
+        "challenges": [
+          "Pipeline opaco entre CRM, hojas y mensajes",
+          "Leads sin enrutamiento ni SLA claros",
+          "Forecasting manual y poco confiable"
+        ],
+        "outcomesTitle": "Qué logras",
+        "outcomes": [
+          "Pipeline unificado con etapas y responsables",
+          "Seguimiento automatizado y alertas de estancamiento",
+          "Respuestas instantáneas sobre ventas y conversión"
+        ],
+        "capabilitiesTitle": "Qué construimos",
+        "capabilities": [
+          "Integración CRM + fuentes comerciales",
+          "Enrutamiento y SLA de leads",
+          "Tableros de pipeline y forecast",
+          "BI conversacional comercial"
+        ],
+        "imageAlt": "Pipeline y CRM conectados"
+      },
+      "production": {
+        "meta": {
+          "title": "Producción y Rendimiento | VasaVant",
+          "description": "Tableros de producción, calidad y cuellos de botella en tiempo real."
+        },
+        "hero": {
+          "eyebrow": "Producción",
+          "title": "Producción y Rendimiento",
+          "subtitle": "Métricas diarias, calidad y cuellos de botella visibles para planta y dirección.",
+          "imageAlt": "Línea de producción con métricas de rendimiento y calidad en tablero"
+        },
+        "challengesTitle": "Desafíos típicos",
+        "challenges": [
+          "Datos de planta en registros manuales o aislados",
+          "Calidad y rendimiento sin correlación en tiempo real",
+          "Cuellos de botella detectados demasiado tarde"
+        ],
+        "outcomesTitle": "Qué logras",
+        "outcomes": [
+          "Producción diaria consolidada y comparable",
+          "Alertas tempranas de desviación y calidad",
+          "Análisis de causas sin exportar a Excel"
+        ],
+        "capabilitiesTitle": "Qué construimos",
+        "capabilities": [
+          "Tablero de producción y OEE",
+          "Captura estructurada en planta",
+          "Automatización de reportes diarios",
+          "Agente de consulta de rendimiento"
+        ],
+        "imageAlt": "Métricas de producción en tablero operativo"
+      },
+      "client-projects": {
+        "meta": {
+          "title": "Clientes y Proyectos | VasaVant",
+          "description": "Líneas de tiempo, comunicación y hitos de entrega centralizados."
+        },
+        "hero": {
+          "eyebrow": "Proyectos",
+          "title": "Gestión de Clientes y Proyectos",
+          "subtitle": "Comunicación, hitos y entregas en un solo lugar para equipos y clientes.",
+          "imageAlt": "Línea de tiempo de proyecto con hitos y comunicación centralizada"
+        },
+        "challengesTitle": "Desafíos típicos",
+        "challenges": [
+          "Contexto de cliente disperso en correo y chat",
+          "Hitos sin alertas ni responsables claros",
+          "Poca visibilidad de carga por proyecto"
+        ],
+        "outcomesTitle": "Qué logras",
+        "outcomes": [
+          "Línea de tiempo única por cliente y proyecto",
+          "Alertas de hitos y entregas",
+          "Historial de comunicación buscable"
+        ],
+        "capabilitiesTitle": "Qué construimos",
+        "capabilities": [
+          "Registro de comunicación y entregables",
+          "Tablero de proyectos y capacidad",
+          "Automatización de recordatorios",
+          "Consultas sobre estado de proyectos"
+        ],
+        "imageAlt": "Proyectos y hitos en sistema unificado"
+      }
+    },
+    "services": {
+      "meta": {
+        "title": "Servicios | VasaVant",
+        "description": "Inteligencia conversacional, operaciones agénticas y capacidades operacionales a medida."
+      },
+      "hero": {
+        "eyebrow": "Capacidades",
+        "title": "Dos modelos, una misión",
+        "subtitle": "Estructuramos tu operación y desplegamos inteligencia sobre una base sólida, sin apps dispersas ni datos huérfanos.",
+        "imageAlt": "Servicios de inteligencia operacional: conversacional y agéntico"
+      },
+      "splitTitle": "Cómo se ve en la práctica"
+    },
+    "process": {
+      "meta": {
+        "title": "Proceso | VasaVant",
+        "description": "De diagnóstico a agentes digitales en 4 pilares y 8 pasos de ejecución."
+      },
+      "hero": {
+        "eyebrow": "Nuestro proceso",
+        "title": "Cómo trabajamos",
+        "subtitle": "Cuatro pilares de madurez y ocho pasos de ejecución para desplegar inteligencia operacional de forma sistemática.",
+        "imageAlt": "Timeline de ocho pasos hacia inteligencia operacional"
+      },
+      "stepsTitle": "Los 8 pasos de ejecución",
+      "stepsSubtitle": "Disponibles en engagements completos, típicamente en 4–12 semanas según alcance."
+    },
+    "contact": {
+      "meta": {
+        "title": "Contacto | VasaVant",
+        "description": "Escríbenos para diseñar tu capa de inteligencia operacional."
+      },
+      "hero": {
+        "eyebrow": "Contacto",
+        "title": "Hablemos de tu operación",
+        "subtitle": "Sin formularios. Un correo directo al equipo. Cuéntanos tu contexto y respondemos en 1–2 días hábiles.",
+        "imageAlt": "Comunicación directa por correo con el equipo VasaVant"
+      },
+      "emailLabel": "Correo",
+      "responseTime": "Respuesta habitual en 1–2 días hábiles (GMT-6)."
+    }
   }
 }

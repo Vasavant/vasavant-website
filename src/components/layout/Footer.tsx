@@ -1,36 +1,27 @@
 import { Mail, Share2 } from 'lucide-react';
-import { getTranslations } from 'next-intl/server';
+import { getLocale, getTranslations } from 'next-intl/server';
 import { VasaVantLogo } from '@/components/ui/VasaVantLogo';
 import { Link } from '@/i18n/navigation';
+import { useCaseHref } from '@/lib/use-case-link';
+import type { Locale } from '@/i18n/routing';
+import { CONTACT_EMAIL, type UseCaseSlug } from '@/lib/routes';
+
+const useCaseFooterSlugs: UseCaseSlug[] = [
+  'logistics',
+  'field-operations',
+  'commercial-operations',
+];
 
 export async function Footer() {
   const currentYear = new Date().getFullYear();
+  const locale = (await getLocale()) as Locale;
   const t = await getTranslations('footer');
-
-  const columns = [
-    {
-      title: t('servicesTitle'),
-      links: [
-        { label: t('serviceLinks.intelligenceSystems'), href: '#services' },
-        { label: t('serviceLinks.dataAutomation'), href: '#services' },
-        { label: t('serviceLinks.conversationalBi'), href: '#services' },
-        { label: t('serviceLinks.agenticOperations'), href: '#services' },
-      ],
-    },
-    {
-      title: t('companyTitle'),
-      links: [
-        { label: t('companyLinks.theProblem'), href: '#problem' },
-        { label: t('companyLinks.theMethod'), href: '#method' },
-        { label: t('companyLinks.useCases'), href: '#use-cases' },
-        { label: t('companyLinks.process'), href: '#process' },
-      ],
-    },
-    {
-      title: t('contactTitle'),
-      links: [{ label: 'hello@vasavant.com', href: 'mailto:hello@vasavant.com' }],
-    },
-  ];
+  const tNav = await getTranslations('nav');
+  const tContent = await getTranslations('content');
+  const useCaseCards = tContent.raw('useCaseCards') as Array<{
+    slug: UseCaseSlug;
+    title: string;
+  }>;
 
   return (
     <footer className="section-navy">
@@ -46,33 +37,110 @@ export async function Footer() {
             <p className="text-sm text-white/60 leading-relaxed">{t('description')}</p>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-10">
-            {columns.map((col) => (
-              <div key={col.title}>
-                <p className="text-xs font-semibold uppercase tracking-wider text-white/50 mb-4">
-                  {col.title}
-                </p>
-                <ul className="space-y-2.5">
-                  {col.links.map((link) => (
-                    <li key={link.label}>
-                      <a
-                        href={link.href}
-                        className="text-sm text-white/70 hover:text-white transition-colors"
-                      >
-                        {link.label}
-                      </a>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-10">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-wider text-white/50 mb-4">
+                {t('servicesTitle')}
+              </p>
+              <ul className="space-y-2.5">
+                <li>
+                  <Link href="/services" className="footer-link">
+                    {t('serviceLinks.intelligenceSystems')}
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/services" className="footer-link">
+                    {t('serviceLinks.dataAutomation')}
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/services" className="footer-link">
+                    {t('serviceLinks.conversationalBi')}
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/services" className="footer-link">
+                    {t('serviceLinks.agenticOperations')}
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-wider text-white/50 mb-4">
+                {t('companyTitle')}
+              </p>
+              <ul className="space-y-2.5">
+                <li>
+                  <a href="/#problem" className="footer-link">
+                    {t('companyLinks.theProblem')}
+                  </a>
+                </li>
+                <li>
+                  <a href="/#method" className="footer-link">
+                    {t('companyLinks.theMethod')}
+                  </a>
+                </li>
+                <li>
+                  <Link href="/use-cases" className="footer-link">
+                    {t('companyLinks.useCases')}
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/process" className="footer-link">
+                    {t('companyLinks.process')}
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-wider text-white/50 mb-4">
+                {tNav('useCases')}
+              </p>
+              <ul className="space-y-2.5">
+                {useCaseFooterSlugs.map((slug) => {
+                  const card = useCaseCards.find((c) => c.slug === slug);
+                  return (
+                    <li key={slug}>
+                      <Link href={useCaseHref(locale, slug)} className="footer-link">
+                        {card?.title ?? slug}
+                      </Link>
                     </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+                  );
+                })}
+                <li>
+                  <Link href="/use-cases" className="footer-link font-medium text-white/90">
+                    {tNav('viewAllUseCases')}
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-wider text-white/50 mb-4">
+                {t('contactTitle')}
+              </p>
+              <ul className="space-y-2.5">
+                <li>
+                  <a href={`mailto:${CONTACT_EMAIL}`} className="footer-link">
+                    {CONTACT_EMAIL}
+                  </a>
+                </li>
+                <li>
+                  <Link href="/contact" className="footer-link">
+                    {tNav('contact')}
+                  </Link>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
 
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pt-4 border-t border-white/10">
           <div className="flex items-center gap-3">
             <a
-              href="mailto:hello@vasavant.com"
+              href={`mailto:${CONTACT_EMAIL}`}
               className="inline-flex items-center justify-center w-9 h-9 rounded-lg border border-white/15 text-white/70 hover:text-white hover:border-white/30 transition-colors"
               aria-label={t('emailAria')}
             >
