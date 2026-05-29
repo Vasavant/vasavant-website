@@ -117,7 +117,18 @@
     },
     "emailAria": "Correo",
     "shareAria": "Compartir",
-    "copyright": "Todos los derechos reservados."
+    "copyright": "Todos los derechos reservados.",
+    "legalNavAria": "Legal",
+    "legalLinks": {
+      "terms": "Términos y condiciones",
+      "privacy": "Política de privacidad"
+    }
+  },
+  "cookieBanner": {
+    "title": "Cookies",
+    "message": "Usamos cookies esenciales para que el sitio funcione y recordar tu preferencia de cookies.",
+    "privacyLink": "Política de privacidad",
+    "accept": "Aceptar"
   },
   "content": {
     "navLinks": [
@@ -489,6 +500,133 @@
       },
       "emailLabel": "Correo",
       "responseTime": "Respuesta habitual en 1–2 días hábiles (GMT-6)."
+    },
+    "terms": {
+      "meta": {
+        "title": "Términos y condiciones | VasaVant",
+        "description": "Términos que rigen el uso del sitio web de VasaVant y servicios relacionados."
+      },
+      "title": "Términos y condiciones",
+      "lastUpdated": "Última actualización: 29 de mayo de 2026",
+      "intro": "Estos términos aplican al uso del sitio web de VasaVant. Al navegar o contactarnos por este sitio, aceptas las condiciones siguientes.",
+      "sections": [
+        {
+          "title": "1. Quiénes somos",
+          "paragraphs": [
+            "VasaVant ofrece consultoría en inteligencia operacional y sistemas a medida para empresas. Las referencias a \"nosotros\" o \"VasaVant\" corresponden a la entidad que opera este sitio.",
+            "Las consultas comerciales y contratos se gestionan por separado de este sitio público. Nada en este sitio constituye una oferta vinculante hasta acordarse por escrito."
+          ]
+        },
+        {
+          "title": "2. Uso del sitio",
+          "paragraphs": [
+            "Puedes usar este sitio solo con fines lícitos. No debes intentar interrumpir el sitio, extraer datos de forma que afecte su rendimiento ni usarlo para transmitir malware o contenido ilícito.",
+            "El contenido se ofrece con fines informativos generales. Podemos actualizar o eliminar páginas en cualquier momento sin aviso."
+          ]
+        },
+        {
+          "title": "3. Propiedad intelectual",
+          "paragraphs": [
+            "Textos, visuales, logotipos y demás materiales del sitio son de VasaVant o se usan con permiso. No puedes copiarlos, modificarlos ni redistribuirlos con fines comerciales sin nuestro consentimiento previo por escrito.",
+            "El trabajo con clientes, entregables e IP de proyectos se rigen por acuerdos de engagement separados, no por estos términos del sitio."
+          ]
+        },
+        {
+          "title": "4. Contacto y comunicaciones",
+          "paragraphs": [
+            "Cuando nos escribes por correo u otro medio, eres responsable de la exactitud de la información que envías. Usamos tu mensaje para evaluar y responder tu consulta.",
+            "No garantizamos un plazo de respuesta a través de este sitio, aunque procuramos responder en el marco indicado en la página de contacto."
+          ]
+        },
+        {
+          "title": "5. Exención de responsabilidad",
+          "paragraphs": [
+            "El sitio y su contenido se proporcionan \"tal cual\". En la medida permitida por la ley, declinamos garantías de comerciabilidad, idoneidad para un fin particular y no infracción.",
+            "No somos responsables por daños indirectos o consecuentes derivados del uso de este sitio. Nuestra responsabilidad total relacionada con el sitio se limita en lo que permita la ley aplicable."
+          ]
+        },
+        {
+          "title": "6. Ley aplicable",
+          "paragraphs": [
+            "Estos términos se rigen por las leyes de México, sin considerar normas de conflicto de leyes. Los tribunales de la Ciudad de México tendrán jurisdicción exclusiva, salvo que la ley local imperativa disponga otra cosa.",
+            "Si alguna disposición se declara inválida, las restantes seguirán vigentes."
+          ]
+        },
+        {
+          "title": "7. Cambios",
+          "paragraphs": [
+            "Podemos revisar estos términos publicando una versión actualizada en esta página. El uso continuado del sitio tras los cambios implica aceptación de los términos revisados.",
+            "Preguntas sobre estos términos: hello@vasavant.com."
+          ]
+        }
+      ]
+    },
+    "privacy": {
+      "meta": {
+        "title": "Política de privacidad | VasaVant",
+        "description": "Cómo VasaVant recopila y usa información cuando visitas nuestro sitio web."
+      },
+      "title": "Política de privacidad",
+      "lastUpdated": "Última actualización: 29 de mayo de 2026",
+      "intro": "Esta política explica qué información recopilamos cuando usas el sitio de VasaVant, cómo la usamos y qué opciones tienes.",
+      "sections": [
+        {
+          "title": "1. Información que recopilamos",
+          "paragraphs": [
+            "Al navegar el sitio, podemos recopilar datos técnicos como dirección IP, tipo de navegador, dispositivo, páginas vistas y ubicación aproximada derivada de tu conexión.",
+            "Si nos contactas por correo, recibimos la información que decides enviar (por ejemplo nombre, empresa y contenido del mensaje)."
+          ]
+        },
+        {
+          "title": "2. Cómo usamos la información",
+          "paragraphs": [
+            "Usamos datos del sitio para operarlo y mejorarlo, entender patrones agregados de tráfico y mantener la seguridad.",
+            "Usamos datos de contacto para responder consultas, evaluar posibles engagements y mantener correspondencia comercial."
+          ]
+        },
+        {
+          "title": "3. Bases legales",
+          "paragraphs": [
+            "Cuando aplique, tratamos datos por interés legítimo (operar el sitio), tu consentimiento (cookies no esenciales si se habilitan) y medidas previas a un contrato (responder tu consulta)."
+          ]
+        },
+        {
+          "title": "4. Cookies",
+          "paragraphs": [
+            "Usamos cookies esenciales y almacenamiento local para recordar tu preferencia de cookies y mantener la funcionalidad básica del sitio.",
+            "No usamos cookies publicitarias ni de seguimiento entre sitios. Puedes aceptar el aviso de cookies; tu elección se guarda en el navegador.",
+            "Puedes borrar cookies y datos del sitio en cualquier momento desde la configuración de tu navegador."
+          ]
+        },
+        {
+          "title": "5. Compartición y conservación",
+          "paragraphs": [
+            "No vendemos tu información personal. Podemos compartir datos con proveedores de infraestructura que alojan o entregan el sitio, bajo obligaciones de confidencialidad.",
+            "Conservamos la correspondencia de contacto el tiempo necesario por motivos comerciales y legales, y luego la eliminamos o anonimizamos."
+          ]
+        },
+        {
+          "title": "6. Tus derechos",
+          "paragraphs": [
+            "Según tu ubicación, puedes tener derecho a acceder, rectificar, eliminar o restringir el tratamiento de tus datos, y a oponerte a ciertos tratamientos.",
+            "Para ejercerlos, escribe a hello@vasavant.com. Responderemos en un plazo razonable."
+          ]
+        },
+        {
+          "title": "7. Seguridad y transferencias internacionales",
+          "paragraphs": [
+            "Aplicamos medidas técnicas y organizativas razonables para proteger la información. Ningún método de transmisión por internet es totalmente seguro.",
+            "Si los datos se procesan fuera de tu país, tomamos medidas acordes con la ley aplicable para protegerlos."
+          ]
+        },
+        {
+          "title": "8. Cambios y contacto",
+          "paragraphs": [
+            "Podemos actualizar esta política publicando una nueva versión en esta página. La fecha de \"última actualización\" cambiará cuando lo hagamos.",
+            "Preguntas sobre privacidad: hello@vasavant.com."
+          ]
+        }
+      ]
     }
   }
 }

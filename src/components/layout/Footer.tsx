@@ -154,9 +154,19 @@ export async function Footer() {
               <Share2 className="w-4 h-4" />
             </a>
           </div>
-          <p className="text-xs text-white/50">
-            &copy; {currentYear} VasaVant. {t('copyright')}
-          </p>
+          <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6">
+            <nav className="flex flex-wrap gap-x-4 gap-y-1 text-xs" aria-label={t('legalNavAria')}>
+              <Link href="/terms" className="text-white/50 hover:text-white/80 transition-colors">
+                {t('legalLinks.terms')}
+              </Link>
+              <Link href="/privacy" className="text-white/50 hover:text-white/80 transition-colors">
+                {t('legalLinks.privacy')}
+              </Link>
+            </nav>
+            <p className="text-xs text-white/50">
+              &copy; {currentYear} VasaVant. {t('copyright')}
+            </p>
+          </div>
         </div>
       </div>
     </footer>
