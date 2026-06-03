@@ -54,7 +54,7 @@ export function resolveUseCaseSlug(
   return slugToKey[locale][param] ?? null;
 }
 
-export const CONTACT_EMAIL = 'hello@vasavant.com';
+export const CONTACT_EMAIL = 'info@vasavant.io';
 
 export const useCaseImagePaths: Record<UseCaseSlug, string> = {
   logistics: '/images/use-case-logistics.png',

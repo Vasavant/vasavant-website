@@ -8,7 +8,7 @@ export function GlobalJsonLd() {
     name: 'VasaVant',
     url: siteUrl,
     logo: `${siteUrl}/icon.svg`,
-    email: 'hello@vasavant.com',
+    email: 'info@vasavant.io',
     description:
       'Operational intelligence studio turning scattered data and manual workflows into structured systems.',
     areaServed: {

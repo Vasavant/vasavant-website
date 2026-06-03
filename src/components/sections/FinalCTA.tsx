@@ -16,7 +16,7 @@ export async function FinalCTA() {
           <p className="text-lg text-[var(--ink-muted)] leading-relaxed mb-8">
             {t('description')}
           </p>
-          <Button variant="primary" size="lg" href="mailto:hello@vasavant.com">
+          <Button variant="primary" size="lg" href="mailto:info@vasavant.io">
             {t('getStarted')}
             <ArrowRight className="ml-2 h-5 w-5" />
           </Button>

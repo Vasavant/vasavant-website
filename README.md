@@ -198,7 +198,7 @@ The TypeUI Premium design system skill is located at `.agents/skills/design-syst
 
 ## 📧 Contact
 
-- **Email:** hello@vasavant.com
+- **Email:** info@vasavant.io
 - **Website:** Built with Next.js and TypeUI Premium
 
 ## 📄 License
