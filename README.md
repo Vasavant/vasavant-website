@@ -99,7 +99,7 @@ vasavant-website/
 Set the canonical site URL in production (required for correct `canonical`, Open Graph, and `sitemap.xml` URLs):
 
 ```bash
-NEXT_PUBLIC_SITE_URL=https://vasavant.com
+NEXT_PUBLIC_SITE_URL=https://www.vasavant.io
 ```
 
 ### Google Search Console (Venezuela focus)
