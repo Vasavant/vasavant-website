@@ -8,6 +8,7 @@ import { ServicesOverview } from '@/components/pages/ServicesOverview';
 import { ServicesSplitSection } from '@/components/pages/ServicesSplitSection';
 import { ServicesCapabilities } from '@/components/pages/ServicesCapabilities';
 import { ServicesFaq } from '@/components/pages/ServicesFaq';
+import { ServicesPageJsonLd } from '@/components/seo/ServicesPageJsonLd';
 import { routing, type Locale } from '@/i18n/routing';
 import { buildPageMetadata, staticLocalizedPath } from '@/lib/seo';
 
@@ -36,6 +37,7 @@ export default async function ServicesPage({ params }: Props) {
 
   return (
     <SiteShell>
+      <ServicesPageJsonLd locale={locale as Locale} />
       <PageHero
         layout="split"
         eyebrow={t('hero.eyebrow')}

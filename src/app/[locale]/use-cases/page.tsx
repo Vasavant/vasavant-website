@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import { SiteShell } from '@/components/layout/SiteShell';
 import { PageHero } from '@/components/pages/PageHero';
 import { PageCta } from '@/components/pages/PageCta';
+import { UseCasesPageJsonLd } from '@/components/seo/UseCasesPageJsonLd';
 import { UseCasesIntro } from '@/components/pages/UseCasesIntro';
 import { UseCasesGrid } from '@/components/sections/UseCasesGrid';
 import { routing, type Locale } from '@/i18n/routing';
@@ -34,6 +35,7 @@ export default async function UseCasesPage({ params }: Props) {
 
   return (
     <SiteShell>
+      <UseCasesPageJsonLd locale={locale as Locale} />
       <PageHero
         layout="split"
         eyebrow={t('hero.eyebrow')}
