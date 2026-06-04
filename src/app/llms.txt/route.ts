@@ -2,6 +2,7 @@ import { getPathname } from '@/i18n/navigation';
 import type { Locale } from '@/i18n/routing';
 import esMessages from '@/messages/es.json';
 import enMessages from '@/messages/en.json';
+import { getAllPostSummaries } from '@/lib/blog';
 import { absoluteUrl, siteUrl } from '@/lib/seo';
 import { getLocalizedUseCaseSlug, USE_CASE_SLUGS } from '@/lib/routes';
 
@@ -33,6 +34,24 @@ function buildUseCaseLines(locale: Locale) {
 
     return `- ${detail.hero.title}: ${path} - ${detail.meta.description}`;
   }).join('\n');
+}
+
+function buildBlogLines(locale: Locale) {
+  return getAllPostSummaries(locale)
+    .map((post) => {
+      const path = absoluteUrl(
+        getPathname({
+          locale,
+          href: {
+            pathname: '/blog/[slug]',
+            params: { slug: post.slug },
+          },
+        })
+      );
+
+      return `- ${post.frontmatter.title}: ${path} - ${post.frontmatter.description}`;
+    })
+    .join('\n');
 }
 
 function buildLocaleSection(locale: Locale) {
@@ -70,6 +89,9 @@ function buildLocaleSection(locale: Locale) {
     `- Use cases: ${localizedPath(locale, '/use-cases')}`,
     `- Blog: ${localizedPath(locale, '/blog')}`,
     `- Contact: ${localizedPath(locale, '/contact')}`,
+    '',
+    locale === 'es' ? '### URLs de recursos' : '### Resource URLs',
+    buildBlogLines(locale),
     '',
     locale === 'es' ? '### URLs de casos de uso' : '### Use case URLs',
     buildUseCaseLines(locale),

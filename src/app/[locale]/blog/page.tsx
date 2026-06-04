@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { ArrowUpRight } from 'lucide-react';
 import { SiteShell } from '@/components/layout/SiteShell';
 import { PageHero } from '@/components/pages/PageHero';
+import { BlogIndexPageJsonLd } from '@/components/seo/BlogIndexPageJsonLd';
 import { Link } from '@/i18n/navigation';
 import { routing, type Locale } from '@/i18n/routing';
 import { getAllPostSummaries, getPostCoverImage, getPostReadTimeMinutes } from '@/lib/blog';
@@ -45,6 +46,12 @@ export default async function BlogIndexPage({ params }: Props) {
 
   return (
     <SiteShell>
+      <BlogIndexPageJsonLd
+        locale={locale as Locale}
+        title={t('meta.title')}
+        description={t('meta.description')}
+        posts={posts}
+      />
       <PageHero
         layout="split"
         eyebrow={t('hero.eyebrow')}
